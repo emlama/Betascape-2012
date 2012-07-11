@@ -10,6 +10,10 @@
   <meta name="description" content="">
 
   <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+
   <link rel="stylesheet" href="css/style.css">
 
   <script src="js/libs/modernizr-2.5.3.min.js"></script>
@@ -17,17 +21,22 @@
 <body>
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
-
   <nav>
-  	<div class="nav-wrapper">
-	  	<ul>
-	  		<li><a href="#about">About</a></li>
-	  		<li><a href="betascape2011.html">Betascape 2011</a></li>
-	  	</ul>
-	  	<p>Tickets Available Soon</p>
-	  </div>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <ul class="nav">
+            <li class="active">
+              <a href="#about">About</a>
+            </li>
+            <li><a href="betascape2011.html">Betascape 2011</a></li>
+          </ul>
+          <p>Tickets Available Soon</p>
+        </div>
+      </div>
+    </div>
   </nav>
-  		
+
   <header>
   	<div class="wrapitup">
 		  <p>
@@ -39,13 +48,13 @@
 <!--   <div class="background-paper"></div> -->
   <div class="main">
 	  <p class="intro-banner">This year we'd like to talk about</p>
-	  
+
 	  <article class="purpose">
 		  <p>How new tools and technologies</p>
 		  <p class="shrink"><img src="img/left-shrink.png"><span>shrinking the barriers to entry</span><img src="img/right-shrink.png"></p>
 		  <p>to creative and technical fields</p>
 		</article>
-	  
+
 	  <div class="row">
 	  	<div class="thumbnail">
 	  		<img src="img/physical-computing.png" alt="physical computing" />
@@ -60,13 +69,13 @@
 	  		<p>Digital Fabrication</p>
 	  	</div>
 	  </div>
-	  
+
 	  <div class="map">
 	  </div>
-	  
+
 	  <div class="sponsors">
 	  </div>
-	  
+
   </div>
   <footer>
 
@@ -75,9 +84,10 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  <script src="js/libs/bootstrap.min.js"></script>
 
   <script src="js/plugins.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/application.js"></script>
 
   <script>
     var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
