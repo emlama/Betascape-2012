@@ -13,6 +13,10 @@ and coffeescript:
 
     npm install coffee-script -g
 
+and uglify.js:
+
+    npm install uglify-js -g
+
 ### Hacking
 
 Make changes to css-src/style.less and js-src/application.coffee, run `make`.
