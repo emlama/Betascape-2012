@@ -42,3 +42,7 @@ publish
 build/buildinfo.properties
 build/config/buildinfo.properties
 .watch
+
+# deployment scripts
+deploy.sh
+deploy.tar.gz
