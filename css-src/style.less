@@ -1,7 +1,19 @@
 @boxShadow: 0px 0px 15px #000;
 @offWhite: #F2EFCE;
+@black: #101010;
+@grayDark: lighten(@black, 40%);
+@gray: lighten(@black, 60%);
 
 // mixins
+
+.antialias() {
+  -webkit-font-smoothing: antialiased;
+}
+
+.embossed() {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+  // text-shadow: #555 0px 2px 3px;
+}
 
 .box-shadow(@style, @c) when (iscolor(@c)) {
   box-shadow:         @style @c;
@@ -24,13 +36,14 @@ body {
 	height: 1200px;
 	background-color: #f4f3ea;
   // letter-spacing: 1px;
+  .antialias();
 }
 
 .navbar {
 	text-transform: uppercase;
 
   .navbar-inner {
-    background: black;
+    background: @black;
     color: white;
   }
 
@@ -52,6 +65,7 @@ body {
     background-color: #C8602C;
     line-height: 43px;
     width: 300px;
+    .embossed();
   }
 
 	// ul {
@@ -103,6 +117,7 @@ header {
 		font-size: 30px;
     line-height: 40px;
 		p {
+      .embossed();
 			width: 520px;
 			padding: 215px 0 0 460px;
 			margin: 0;
@@ -111,14 +126,14 @@ header {
 }
 
 footer {
-  background: black;
+  background: @black;
   text-align: center;
   height: 120px;
   padding-top: 32px;
   margin-top:  32px;
   p {
     font-size: 16px;
-    color: lighten(#404040, 40%);
+    color: @gray;
 
     .space {
       padding: 0 12px;
@@ -143,6 +158,7 @@ footer {
 		color: #FFF;
 		padding: 14px 0px 0px 0px;
 		text-align: center;
+    .embossed();
 	}
 }
 
@@ -172,6 +188,7 @@ footer {
 .subject {
   text-align: center;
   .caption {
+    margin-top: 4px;
     font-size: 16px;
   }
 }
@@ -200,7 +217,8 @@ footer {
   p {
     font-size: 16px;
     font-weight: bold;
-    color: lighten(#404040, 40%);
+    color: @gray;
+    .embossed();
   }
 
   ul {
@@ -263,6 +281,34 @@ footer {
   }
 }
 
+// landscape phone to small desktop & portrait tablet
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  body { padding-left: 0; padding-right: 0; }
+  nav { padding-left: 20px; padding-right: 20px; }
+
+  .navbar-fixed-top { margin-bottom: 0; }
+
+  header {
+    margin-left: -20px;
+    .wrapitup p {
+      width: 520px;
+      padding: 266px 0 0 0;
+      margin: 0;
+    }
+  }
+
+  .purpose {
+    width: 480px;
+    p { font-size: 22px; }
+  }
+
+  .map-callout-wrapper .map-callout p {
+    font-size: 14px;
+  }
+
+  footer p .space { display: block; }
+}
+
 // landscape phone
 @media (max-width: 480px) {
   body { padding-left: 0; padding-right: 0; }
@@ -295,31 +341,7 @@ footer {
   .map-callout-wrapper .map-callout p {
     font-size: 14px;
   }
-}
 
-// landscape phone to small desktop & portrait tablet
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-  body { padding-left: 0; padding-right: 0; }
-  nav { padding-left: 20px; padding-right: 20px; }
-
-  .navbar-fixed-top { margin-bottom: 0; }
-
-  header {
-    margin-left: -20px;
-    .wrapitup p {
-      width: 520px;
-      padding: 266px 0 0 0;
-      margin: 0;
-    }
-  }
-
-  .purpose {
-    width: 480px;
-    p { font-size: 22px; }
-  }
-
-  .map-callout-wrapper .map-callout p {
-    font-size: 14px;
-  }
+  footer p .space { display: block; }
 }
 
