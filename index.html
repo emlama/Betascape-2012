@@ -31,6 +31,9 @@
             <li class="active">
               <a href="#about">About</a>
             </li>
+            <li>
+              <a href="#map">Map</a>
+            </li>
             <li><a href="betascape2011.html">Betascape 2011</a></li>
           </ul>
           <p>Tickets Available Soon</p>
@@ -48,11 +51,11 @@
 	  </div>
   </header>
 
+  <a id='about'></a>
   <div class='container'>
     <div class='row'>
       <div class='span12 main'>
         <p class="intro-banner">This year we'd like to talk about</p>
-
         <article class="purpose">
           <p>How new tools and technologies</p>
           <p class="shrink"><img src="img/left-shrink.png"><span>shrinking the barriers to entry</span><img src="img/right-shrink.png"></p>
@@ -90,18 +93,32 @@
         </div>
 	  	</div>
 	  </div>
-
-	  <div class="map">
-	  </div>
-
-	  <div class="sponsors">
-	  </div>
-
   </div>
+
+  <a id='map'></a>
+  <div class='map-canvas-wrapper'>
+    <div id="map-canvas">
+      <div class='container'>
+        <div class='row'>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='container'>
+	  <div class='row'>
+      <div class="span12 sponsors">
+        <p>OUR GENEROUS SPONSORS</p>
+        <ul>
+          <li><img src='http://placekitten.com/300/200' /></li>
+        </ul>
+      </div>
+	  </div>
+  </div>
+
   <footer>
 
   </footer>
-
 
   <!-- DEV MODE ONLY
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -118,5 +135,51 @@
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
   </script>
+
+  <script src='http://maps.googleapis.com/maps/api/js?key=AIzaSyAY_P8p0Qolf9MfXSvw9dTPmnmm900bP7w&sensor=false'></script>
+
+  <script>
+    function initializeMap() {
+      // https://maps.google.com/maps?saddr=Baltimore,+MD&daddr=Cathedral+St&hl=en&sll=&sspn=0.007073,0.008776&geocode=FRGGVwIdo_1u-ym3g_TWrgPIiTFY5yNCqJZIBA%3BFX7AVwIdQeNu-w&t=v&mra=mift&mrsp=1&sz=17&z=17&iwloc=ddw1
+
+      var styles = [
+        {
+          stylers: [
+            { hue: "#DBF3DF" },
+            { saturation: -20 }
+          ]
+        },{
+          featureType: "poi",
+          elementType: "labels",
+          stylers: [
+            { visibility: "off" }
+          ]
+        },{
+          featureType: "road",
+          elementType: "geometry",
+          stylers: [
+            { lightness: 100 },
+            { visibility: "simplified" }
+          ]
+        }
+      ];
+
+      var mapOptions = {
+        styles: styles,
+        zoom: 17,
+        disableDefaultUI: true,
+        center: new google.maps.LatLng(39.30577,-76.619399),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+
+      var map = new google.maps.Map(document.getElementById('map-canvas'),
+          mapOptions);
+    }
+    $(function () {
+      initializeMap();
+    });
+
+  </script>
+
 </body>
 </html>
