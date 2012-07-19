@@ -78,7 +78,7 @@ body {
 	// 	width: 300px;
 	// }
 
-	z-index: 99;
+	z-index: 101;
 	-webkit-box-shadow: @boxShadow;
 }
 
@@ -114,8 +114,20 @@ footer {
   background: black;
   text-align: center;
   height: 120px;
-  padding-top: 16px;
+  padding-top: 32px;
   margin-top:  32px;
+  p {
+    font-size: 16px;
+    color: lighten(#404040, 40%);
+
+    .space {
+      padding: 0 12px;
+    }
+
+    a {
+      color: inherit;
+    }
+  }
 }
 
 .main {
@@ -136,7 +148,7 @@ footer {
 
 .purpose {
 	margin: 0 auto;
-	width: 680px;
+	width: 700px;
 	p {
 		font-size: 36px;
 		font-weight: bold;
@@ -161,6 +173,46 @@ footer {
   text-align: center;
   .caption {
     font-size: 16px;
+  }
+}
+
+.map-callout-wrapper {
+  z-index: 99;
+
+  .map-callout {
+    position: absolute;
+    padding: 18px;
+    background: white;
+    z-index: 99;
+    .box-shadow(0 0 12px, 60%);
+    margin-top: -224px;
+    p {
+      font-size: 20px;
+      line-height: 24px;
+      color: black;
+    }
+  }
+}
+
+.sponsors {
+  text-align: center;
+
+  p {
+    font-size: 16px;
+    font-weight: bold;
+    color: lighten(#404040, 40%);
+  }
+
+  ul {
+    li {
+      list-style-type: none;
+      padding-left: 10px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+    li:first {
+      padding-left: 0;
+    }
   }
 }
 
@@ -189,6 +241,10 @@ footer {
     padding: 266px 0 0 361px;
     margin: 0;
   }
+
+  .map-callout-wrapper .map-callout p {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 978px) {
@@ -201,25 +257,53 @@ footer {
     padding: 266px 0 0 168px;
     margin: 0;
   }
+
+  .map-callout-wrapper .map-callout p {
+    font-size: 14px;
+  }
 }
 
 // landscape phone
 @media (max-width: 480px) {
+  body { padding-left: 0; padding-right: 0; }
+  nav { padding-left: 20px; padding-right: 20px; }
+
   .navbar-fixed-top { margin-bottom: 0; }
   header {
     margin-left: -143px;
     .wrapitup p {
-      width: 520px;
-      padding: 266px 0 0 0;
+      width: 359px;
+      padding: 266px 0 0 24px;
       margin: 0;
-      font-size: 26px;
+      font-size: 22px;
     }
+  }
+
+  .purpose {
+    width: 400px;
+    margin-left: -18px;
+    p { font-size: 16px; }
+    .shrink {
+      letter-spacing: -1px;
+    }
+  }
+
+  .main .intro-banner {
+    margin-left: -42px;
+  }
+
+  .map-callout-wrapper .map-callout p {
+    font-size: 14px;
   }
 }
 
 // landscape phone to small desktop & portrait tablet
 @media only screen and (min-width: 481px) and (max-width: 767px) {
+  body { padding-left: 0; padding-right: 0; }
+  nav { padding-left: 20px; padding-right: 20px; }
+
   .navbar-fixed-top { margin-bottom: 0; }
+
   header {
     margin-left: -20px;
     .wrapitup p {
@@ -227,6 +311,15 @@ footer {
       padding: 266px 0 0 0;
       margin: 0;
     }
+  }
+
+  .purpose {
+    width: 480px;
+    p { font-size: 22px; }
+  }
+
+  .map-callout-wrapper .map-callout p {
+    font-size: 14px;
   }
 }
 

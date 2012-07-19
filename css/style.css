@@ -5,7 +5,7 @@ body {
 }
 
 .navbar {
-  z-index: 99;
+  z-index: 101;
   text-transform: uppercase;
   -webkit-box-shadow: 0px 0px 15px #000000;
 }
@@ -64,10 +64,23 @@ header .wrapitup p {
 
 footer {
   height: 120px;
-  padding-top: 16px;
+  padding-top: 32px;
   margin-top: 32px;
   text-align: center;
   background: black;
+}
+
+footer p {
+  font-size: 16px;
+  color: #a6a6a6;
+}
+
+footer p .space {
+  padding: 0 12px;
+}
+
+footer p a {
+  color: inherit;
 }
 
 .main .intro-banner {
@@ -83,7 +96,7 @@ footer {
 }
 
 .purpose {
-  width: 680px;
+  width: 700px;
   margin: 0 auto;
 }
 
@@ -116,6 +129,48 @@ footer {
   font-size: 16px;
 }
 
+.map-callout-wrapper {
+  z-index: 99;
+}
+
+.map-callout-wrapper .map-callout {
+  position: absolute;
+  z-index: 99;
+  padding: 18px;
+  margin-top: -224px;
+  background: white;
+  -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+     -moz-box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+.map-callout-wrapper .map-callout p {
+  font-size: 20px;
+  line-height: 24px;
+  color: black;
+}
+
+.sponsors {
+  text-align: center;
+}
+
+.sponsors p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #a6a6a6;
+}
+
+.sponsors ul li {
+  display: inline-block;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+.sponsors ul li:first {
+  padding-left: 0;
+}
+
 .map-canvas-wrapper {
   width: 100%;
   padding: 12px 0;
@@ -141,6 +196,9 @@ footer {
     padding: 266px 0 0 361px;
     margin: 0;
   }
+  .map-callout-wrapper .map-callout p {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 978px) {
@@ -152,9 +210,20 @@ footer {
     padding: 266px 0 0 168px;
     margin: 0;
   }
+  .map-callout-wrapper .map-callout p {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 480px) {
+  body {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  nav {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
   .navbar-fixed-top {
     margin-bottom: 0;
   }
@@ -162,14 +231,38 @@ footer {
     margin-left: -143px;
   }
   header .wrapitup p {
-    width: 520px;
-    padding: 266px 0 0 0;
+    width: 359px;
+    padding: 266px 0 0 24px;
     margin: 0;
-    font-size: 26px;
+    font-size: 22px;
+  }
+  .purpose {
+    width: 400px;
+    margin-left: -18px;
+  }
+  .purpose p {
+    font-size: 16px;
+  }
+  .purpose .shrink {
+    letter-spacing: -1px;
+  }
+  .main .intro-banner {
+    margin-left: -42px;
+  }
+  .map-callout-wrapper .map-callout p {
+    font-size: 14px;
   }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 767px) {
+  body {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  nav {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
   .navbar-fixed-top {
     margin-bottom: 0;
   }
@@ -180,5 +273,14 @@ footer {
     width: 520px;
     padding: 266px 0 0 0;
     margin: 0;
+  }
+  .purpose {
+    width: 480px;
+  }
+  .purpose p {
+    font-size: 22px;
+  }
+  .map-callout-wrapper .map-callout p {
+    font-size: 14px;
   }
 }
