@@ -46,3 +46,4 @@ build/config/buildinfo.properties
 # deployment scripts
 deploy.sh
 deploy.tar.gz
+deploy-ignore.txt
