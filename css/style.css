@@ -6,14 +6,22 @@ body {
 
 .navbar {
   z-index: 99;
-  height: 43px;
-  color: white;
   text-transform: uppercase;
-  background-color: black;
   -webkit-box-shadow: 0px 0px 15px #000000;
 }
 
-.navbar a {
+.navbar .navbar-inner {
+  color: white;
+  background: black;
+}
+
+.navbar .nav,
+.navbar p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar .nav > li > a {
   color: white;
 }
 
@@ -54,15 +62,10 @@ header .wrapitup p {
   margin: 0;
 }
 
-.main {
-  width: 1200px;
-  margin: 0 auto;
-}
-
 .main .intro-banner {
   width: 446px;
   height: 39px;
-  padding: 12px 0 0px 0px;
+  padding: 14px 0 0px 0px;
   margin: 0 auto;
   font-weight: bold;
   color: #FFF;
@@ -93,126 +96,66 @@ header .wrapitup p {
   padding: 15px;
 }
 
-.row .thumbnail {
-  float: left;
-  width: 400px;
+.row.separate {
+  margin-top: 72px;
+}
+
+.subject {
   text-align: center;
 }
 
-@media only screen and (min-width: 35em) {
+.subject .caption {
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 1200px) {
   
 }
 
-.ir {
-  display: block;
-  overflow: hidden;
-  *line-height: 0;
-  text-align: left;
-  text-indent: -999em;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  border: 0;
-  direction: ltr;
+@media only screen and (min-width: 979px) and (max-width: 1199px) {
+  header .wrapitup p {
+    width: 520px;
+    padding: 266px 0 0 361px;
+    margin: 0;
+  }
 }
 
-.ir br {
-  display: none;
+@media only screen and (min-width: 768px) and (max-width: 978px) {
+  .navbar-fixed-top {
+    margin-bottom: 0;
+  }
+  header .wrapitup p {
+    width: 520px;
+    padding: 266px 0 0 168px;
+    margin: 0;
+  }
 }
 
-.hidden {
-  display: none !important;
-  visibility: hidden;
+@media (max-width: 480px) {
+  .navbar-fixed-top {
+    margin-bottom: 0;
+  }
+  header {
+    margin-left: -143px;
+  }
+  header .wrapitup p {
+    width: 520px;
+    padding: 266px 0 0 0;
+    margin: 0;
+    font-size: 26px;
+  }
 }
 
-.visuallyhidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  border: 0;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  clip: auto;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: "";
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.clearfix {
-  *zoom: 1;
-}
-
-@media print {
-  * {
-    color: black !important;
-    text-shadow: none !important;
-    background: transparent !important;
-    -ms-filter: none !important;
-        filter: none !important;
-    box-shadow: none !important;
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .navbar-fixed-top {
+    margin-bottom: 0;
   }
-  a,
-  a:visited {
-    text-decoration: underline;
+  header {
+    margin-left: -20px;
   }
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: "";
-  }
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-  thead {
-    display: table-header-group;
-  }
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-  img {
-    max-width: 100% !important;
-  }
-  @page  {
-    margin: 0.5cm;
-  }
-  p,
-  h2,
-  h3 {
-    widows: 3;
-    orphans: 3;
-  }
-  h2,
-  h3 {
-    page-break-after: avoid;
+  header .wrapitup p {
+    width: 520px;
+    padding: 266px 0 0 0;
+    margin: 0;
   }
 }
