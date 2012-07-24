@@ -1,0 +1,50 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Designed By: Friends of the Web
+  Site: http://friendsoftheweb.com
+  Twitter: @friendsoftheweb
+  Location: Baltimore, MD
+
+  Developed By: Kyle Fritz
+  Site: http://simplicitysignals.com
+  Twitter: @kylefritz
+  Location: Baltimore, MD
+
+
+/* THANKS */
+  Names (& URL): The Robert W. Deutsch Foundation (http://rwdfoundation.org/)
+
+/* SITE */
+  Source: https://github.com/kylefritz/betascape-site-2011
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery
+  Software: Jekyll, Compass, Ruby
+  
+
+                                    
+                               -o/-                       
+                               +oo//-                     
+                              :ooo+//:                    
+                             -ooooo///-                   
+                             /oooooo//:                   
+                            :ooooooo+//-                  
+                           -+oooooooo///-                 
+           -://////////////+oooooooooo++////////////::    
+            :+ooooooooooooooooooooooooooooooooooooo+:::-  
+              -/+ooooooooooooooooooooooooooooooo+/::////:-
+                -:+oooooooooooooooooooooooooooo/::///////:-
+                  --/+ooooooooooooooooooooo+::://////:-   
+                     -:+ooooooooooooooooo+:://////:--     
+                       /ooooooooooooooooo+//////:-        
+                      -ooooooooooooooooooo////-           
+                      /ooooooooo+oooooooooo//:            
+                     :ooooooo+/::/+oooooooo+//-           
+                    -oooooo/::///////+oooooo///-          
+                    /ooo+::://////:---:/+oooo//:          
+                   -o+/::///////:-      -:/+o+//-         
+                   :-:///////:-            -:/://         
+                     -////:-                 --//:        
+                       --                       -:        

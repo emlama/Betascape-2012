@@ -1,0 +1,371 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>betascape / Baltimore MD / September 23-25</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Betascape is a weekend of Art and Technology in Baltimore MD. Come learn, connect, and create something with other artists, technologists, and everyone in between." />
+  <meta name="author" content="Betascape, Friends of the Web, and Kyle Fritz">
+
+  <link rel="image_src" href="http://betascape.org/img/betascape-fb.png" />
+  <!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link href='http://fonts.googleapis.com/css?family=Numans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/stylesheets/screen.css">
+
+  <script src="js/libs/modernizr-1.7.min.js"></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write("<script src='js/libs/jquery-1.6.2.min.js'>\x3C/script>")</script>
+
+
+  <!--
+  <script src="http://processingjs.org/content/download/processing-js-1.2.3/processing-1.2.3.min.js"></script>
+  <script>window.Processing || document.write("<script src='js/libs/processing-1.2.3.min.js'>\x3C/script>")</script>
+  -->
+  <script src='js/libs/processing-1.2.3.min.js'></script>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.7/underscore-min.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/libs/jquery.scrollTo.js"></script>
+  <!-- end scripts-->
+
+
+</head>
+
+<body lang="en">
+  <section class="site-links">
+      <nav>
+       <ul>
+        <li class="home current"><a href="/">Home</a></li>
+        <li class="schedule"><a href="/schedule2011.html">Schedule</a></li>
+        <li class="presenters"><a href="/presenters2011.html">Presenters</a></li>
+        <li class="venues"><a href="/venues2011.html">Venues</a></li>
+        <li><a href="/#sponsorship">Sponsors</a></li>
+        <li class="about"><a href="/about.html">About</a></li>
+        <li class="register"><a href="http://betascape2011.eventbrite.com/">Register Now ($30)</a></li>
+       </ul>
+      <header class="date">
+        The Weekend of September 23-25 in <a href="http://www.stationnorth.org/" target="_blank">Station North</a>
+      </header>
+      </nav>
+  </section>
+    <div class="ribbons">
+    <script>
+      ribbons=null;
+      //called inside of processing to expose ribbons to js
+      exposeRibbons=function(r){
+        ribbons=r;
+      }
+      $(function(){
+        $('#wrapper_container').mousemove(function(e){
+          var offset=$('#container').position();
+          if(typeof(ribbons)!="undefined"){
+            ribbons.sometimesAddRibbon(e.pageX-offset.left+140,e.pageY);
+          }
+        });
+      });
+    </script>
+    <canvas 
+    data-processing-sources="/ribbons/misc.pde
+    /ribbons/Ribbon.pde
+    /ribbons/RibbonSet.pde
+    /ribbons/User_Interaction.pde
+    /ribbons/ribbons.pde"></canvas>
+</div>
+
+    <div id="wrapper_container">
+    <div id="container">
+      <header>
+        <hgroup class="view-source">
+         <a href="https://github.com/kylefritz/betascape-site-2011/blob/master/ribbons/RibbonSet.pde" target="_blank">View Source</a>
+        </hgroup>
+        <hgroup class="social">
+
+          <div id="fb-root"></div>
+          <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#appId=250115545033321&xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));</script>
+
+          <div class="fb-like" data-href="http://betascape.org" data-send="false" data-layout="button_count" data-width="45" data-show-faces="false"></div>
+
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://betascape.org" data-text="Art+Tech" data-via="betascape">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+
+          <!-- Place this tag where you want the +1 button to render -->
+          <g:plusone size="medium"></g:plusone>
+
+          <!-- Place this render call where appropriate -->
+          <script type="text/javascript">
+            (function() {
+              var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+              po.src = 'https://apis.google.com/js/plusone.js';
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+          </script>
+
+        </hgroup>
+        <hgroup class="logo">
+          <h1>betascape</h1>
+          <img id="facebook-thumb" src="/img/betascape-fb.png" style="display:none" />
+          <a href="/"><img src="/img/betascape-2011-logo.png" width="344" /></a>
+        </hgroup>
+      </header>
+
+      <script>
+$(function(){
+/*
+$('.attendees').eventbrite_attendees({
+  app_key: 'C2TEMDHGVVBC7PVYUN',
+  event_id: '2015326897' //betascape
+});
+*/
+
+  betascape.getPresenters(function(presenters){
+      var listTmpl=_.template($('#people-template').html());
+      var html=listTmpl({people : presenters});
+      $('.whos-there .presenters').append(html);
+  });
+  $.getJSON("http://betascape.tumblr.com/api/read/json?num=1&callback=?",function(data,status){
+    $('.description .current-blog')
+      .html(data.posts[0]["regular-body"]);
+  });
+  
+});
+
+</script>
+<script type="template" id="people-template">
+    <% _.each(people, function(person) { %>
+      <li class='color<%= parseInt(Math.random()*4) %>'>
+        <a href='<%= person.website %>'><%= person.name.replace(" ","&nbsp;") %> </a>
+      </li>
+    <% }); %>
+</script>
+
+<section class="contact">
+	<h1><pop>Betascape 2011 is done & done.</pop></h1>
+	<p>We'll be back in 2012. We are planning a bunch of awesome TBA events. Share your info and we'll keep you in the loop.</p>
+	<p><a href="https://docs.google.com/spreadsheet/viewform?hl=en_US&formkey=dGwtRmFRT0t0cEJwSTlMekJXSlpOelE6MQ#gid=0">Get on our mailing list!</a></p>
+</section>
+
+
+<section class="promo">
+  <header>
+    <h3>Come to free events on Friday and register for Saturday and Sunday events</h3>
+    Tickets include <a href="">lectures and workshops</a> on Saturday and <a href="">CreateCamp</a> on Sunday plus breakfast and lunch both days.
+  </header>
+  <footer>
+    <a href="http://betascape2011.eventbrite.com/">Register For Betascape</a>
+  </footer>
+</section>
+
+<section class="description">
+  <div class="current-blog">Betascape is a weekend of Art and Technology in Baltimore MD. Come learn, connect, and create something with other artists, technologists, and everyone in between.</div>
+</section>
+
+<div class="overview-locations">
+  <section class="locations">
+    <header>Event Locations</header>
+    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?msa=0&amp;ie=UTF8&amp;vpsrc=0&amp;msid=200303818173214935563.0004aac0452b1f8a2073e&amp;ll=39.310044,-76.617812&amp;spn=0.002395,0.002583&amp;output=embed"></iframe>
+    <footer>
+    <a href="http://maps.google.com/maps/ms?msid=200303818173214935563.0004aac0452b1f8a2073e&msa=0" target="_blank">View in own window → </a>
+    </footer>
+  </section>
+  <section class="overview">
+    <header>Betascape Overview</header>
+    <table>
+      
+      <tr class="odd ">
+        <td>Friday&nbsp;Night</td><td><a href="http://outletbaltimore.tumblr.com/" target="_blank">Outlet Baltimore</a> Relaunch Party, 6pm @ <a href="http://thewindupspace.com/" target="_blank">Windup Space</a>.</td>
+      </tr>
+      
+      <tr class="even ">
+        <td>Friday&nbsp;Night</td><td><a href="http://www.literaturepartybaltimore.info/" target="_blank">Literature Party</a> by Publishing Genius, 8pm @ <a href="http://themetrogallery.net/" target="_blank">Metro Gallery</a>.</td>
+      </tr>
+      
+      <tr class="odd ">
+        <td>Saturday&nbsp;Day</td><td>Lectures, conversations and workshops. <br /> AFKFest 2011 Car Computer Festival & Speaker Series</td>
+      </tr>
+      
+      <tr class="even ">
+        <td>Saturday&nbsp;Night</td><td><a href="/blockparty.html">Station North Block Party</a> from 6pm featuring bands <em>Baltimare</em> and <em>Bobby E. Lee &amp; The Sympathizers</em> and Baltimore's Food Trucks.<br /><a target="_blank" href="http://bytenyte.com/?p=291">Byte Nyte</a>! Live 8-bit music and visuals at the Hour Haus.</td>
+      </tr>
+      
+      <tr class="odd ">
+        <td>Sunday</td><td>CreateCamp is a mini-hackathon, with to get people experimenting and collaborating after spending the day before learning.</td>
+      </tr>
+      
+    </table>
+    <footer>
+    <a href="/schedule2011.html">Full Schedule → </a>
+    </footer>
+  </section>
+</div>
+
+<section class="whos-there">
+  <header><h4>Who's going to be there?</h4></header>
+  <ul class="presenters"></ul>
+  <!--<div class="attendees">&nbsp;</div>-->
+</section>
+
+<section class="sponsorship">
+  <section class="sponsors">
+    <header>
+      <h4  id="sponsorship" >Sponsors<h4>
+    </header>
+    <a href="http://rwdfoundation.org/" target="_blank"><img src="/img/sponsorship/rwdlogo.png" title="The Robert W. Deutsch Foundation (Premier Sponsor)" /></a>
+    <h5>Thanks to our Premier Sponsor The Robert W. Deutsch Foundation</h5>
+    <ul class="logo">
+      
+      <li>
+        <a href="http://intridea.com" target="_blank">
+          <img src="/img/sponsorship/intridea-logo.png" title="Intridea" />
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://www.mindgrub.com" target="_blank">
+          <img src="/img/sponsorship/mindgrublogo.png" title="Mind Grub" />
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://www.zynga.com" target="_blank">
+          <img src="/img/sponsorship/zyngalogo.png" title="Zynga" />
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://glaceau.com/" target="_blank">
+          <img src="/img/sponsorship/smartwater-logo.jpg" title="Smart Water" />
+        </a>
+      </li>
+      
+    </ul>
+    <ul class="nologo">
+      
+        <li><a href="http://www.figure53.com" target="_blank">Figure 53</a></li>
+      
+        <li><a href="http://www.simplyevolve.com" target="_blank">Evolve Communications</a></li>
+      
+        <li><a href="http://www.mp3car.com" target="_blank">MP3 Car</a></li>
+      
+    </ul>
+  </section>
+
+  <section class="partners">
+    <header>
+      <h4>Partners<h4>
+    </header>
+    <a href="http://stationnorth.org" target="_blank"><img src="/img/sponsorship/stationnorthlogo.gif" title="Station North" /></a>
+    <a href="http://mica.edu" target="_blank"><img src="/img/sponsorship/micalogo.gif" title="MICA" /></a>
+    <header>
+      <h4>Media Partners<h4>
+    </header>
+    <a href="http://whatweekly.com" target="_blank"><img src="/img/sponsorship/whatweeklylogo.png" title="What Weekly: Documenting the Baltimore Renaissance" /></a>
+    <a href="http://wypr.org" target="_blank"><img src="/img/sponsorship/wyprlogo.png" title="WYPR: Your Public Radio" /></a>
+  </section>
+
+  <section class="supporters">
+    <header>
+      <h4>Friends of Betascape<h4>
+    </header>
+    <ul>
+    
+      <li>UMBC</li>
+    
+      <li>Hopkins Digital Media Lab</li>
+    
+      <li>High Zero</li>
+    
+      <li>BMA</li>
+    
+      <li>Baltimore Node</li>
+    
+      <li>Load of Fun</li>
+    
+      <li>Joe Squared</li>
+    
+      <li>GBTC</li>
+    
+    </ul>
+  </section>
+</section>
+
+<section class="twitter">
+<header>
+Follow <a href="https://twitter.com/betascape" target="_blank">@Betascape</a> on Twitter. Use <a href="https://twitter.com/search/%23betascape">#betascape</a> to join the Conversation.
+</header>
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 3,
+  interval: 6000,
+  width: 'auto',
+  height: 'auto',
+  theme: {
+    shell: {
+      background: 'transparent',
+      color: '#000000'
+    },
+    tweets: {
+      background: 'transparent',
+      color: '#000000',
+      links: '#000000'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: false,
+    behavior: 'all'
+  }
+}).render().setUser('betascape').start();
+</script>
+</section>
+
+
+
+      <footer class="credits">
+        Site Designed by <a target="blank" href="http://friendsoftheweb.com">Friends of the Web</a> &bull;
+        Developed by <a target="_blank" href="http://simplicitysignals.com">Kyle Fritz</a>
+      </footer>
+
+    </div>
+    </div>
+  <!--[if lt IE 7 ]>
+    <script src="js/libs/dd_belatedpng.js"></script>
+    <script>DD_belatedPNG.fix("img, .png_bg");</script>
+  <![endif]-->
+
+  <script>
+    var _gaq=[["_setAccount","UA-16287734-1"],["_trackPageview"]];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+    s.parentNode.insertBefore(g,s)}(document,"script"));
+  </script>
+
+</body>
+</html>
