@@ -1,10 +1,26 @@
+@import "bootstrap/variables.less";
+@import "bootstrap/mixins.less";
+
 @boxShadow: 0px 0px 15px #000;
+@white: #fff;
 @offWhite: #F2EFCE;
 @black: #101010;
 @grayDark: lighten(@black, 40%);
 @gray: lighten(@black, 60%);
+@grayLighter: #CCCBBE;
+
+// colorscheme
+@theme-blue:   #33A0BC;
+@theme-green:  #AFC04D;
+@theme-orange: #C95F38;
 
 // mixins
+.border-radius(@radius: 2px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
 
 .antialias() {
   -webkit-font-smoothing: antialiased;
@@ -12,7 +28,6 @@
 
 .embossed() {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
-  // text-shadow: #555 0px 2px 3px;
 }
 
 .box-shadow(@style, @c) when (iscolor(@c)) {
@@ -44,7 +59,7 @@ body {
 
   .navbar-inner {
     background: @black;
-    color: white;
+    color: @grayLighter;
   }
 
   .nav, p {
@@ -53,7 +68,7 @@ body {
   }
 
   .nav > li > a {
-    color: white;
+    color: @grayLighter;
   }
 
   p {
@@ -61,51 +76,27 @@ body {
     float: right;
     margin: 0;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: -30px;
+    line-height: 60px;
     background-color: #C8602C;
-    line-height: 43px;
     width: 300px;
+    color: @white;
     .embossed();
   }
-
-	// ul {
-	// 	float: left;
-	// 		li {
-	// 		display: inline;
-	// 		padding: 0 10px;
-	// 		a {
-	// 			color: white;
-	// 			text-decoration: none;
-	// 			line-height: 43px;
-	// 		}
-	// 	}
-	// }
-
-	// p {
-	// 	text-align: center;
-	// 	float: right;
-	// 	margin: 0;
-	// 	margin-top: 0;
-	// 	margin-bottom: 0;
-	// 	background-color: #C8602C;
-	// 	line-height: 43px;
-	// 	width: 300px;
-	// }
 
 	z-index: 101;
 	-webkit-box-shadow: @boxShadow;
 }
 
-header {
+.header-wrapper {
 	background: transparent url('../img/header-bg.png') no-repeat center -10px;
 	height: 500px;
-	margin: 0 auto;
+  width: 100%;
+}
+
+header {
 	color: white;
-	width: 1200px;
-	//-moz-transform: rotate(-1deg);
-	//-webkit-transform: rotate(-1deg);
-	//-moz-box-shadow: $boxShadow;
-	//-webkit-box-shadow: $boxShadow;
+
 	.wrapitup {
 		color: @offWhite;
 		margin: 0 auto;
@@ -116,11 +107,18 @@ header {
 		font-weight: bold;
 		font-size: 30px;
     line-height: 40px;
-		p {
+
+    .heading {
       .embossed();
-			width: 520px;
-			padding: 215px 0 0 460px;
-			margin: 0;
+      width: 520px;
+      padding: 215px 0 0 460px;
+      margin: 0;
+      small {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 40px;
+        color: @offWhite;
+      }
 		}
 	}
 }
@@ -145,39 +143,69 @@ footer {
   }
 }
 
-.main {
-	// width: 1200px;
-	// margin: 0px auto;
-	.intro-banner {
-		background: transparent url("../img/banner.png") no-repeat top center;
-		width: 446px;
-		margin: 0 auto;
-		text-transform: uppercase;
-		font-weight: bold;
-		height: 39px;
-		color: #FFF;
-		padding: 14px 0px 0px 0px;
-		text-align: center;
-    .embossed();
-	}
+.section {
+  margin-top: 38px;
 }
 
-.purpose {
-	margin: 0 auto;
-	width: 700px;
-	p {
-		font-size: 36px;
-		font-weight: bold;
-		text-align: center;
-		padding: 0 30px;
-		margin: 0.5em 0;
-	}
-	.shrink {
-		padding: 0;
-		letter-spacing: -2px;
-		span {
-			padding: 15px;
-		}
+.lead-callout {
+  font-size: 38px;
+  line-height: 42px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.callout-1 { color: @theme-blue; }
+.callout-2 { color: @theme-green; }
+.callout-3 { color: @theme-orange; }
+
+@register-button-height: 120px;
+.register-announcement {
+  .button {
+    .border-radius(6px);
+    background: lighten(@theme-blue, 10%);
+    color: lighten(@black, 10%);
+    display: block;
+    font-size: 26px;
+    font-weight: bold;
+    height:      @register-button-height;
+    line-height: @register-button-height;
+    text-align: center;
+    width: 100%;
+  }
+
+  .description {
+    color: @black;
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.row .span1.plushalf {
+  width: @fluidGridColumnWidth * 1.5;
+}
+
+.main {
+	.banner {
+    padding: 14px;
+    background: @theme-orange;
+
+    p {
+      text-align: center;
+
+      small {
+        color: @white;
+        font-size: 14px;
+        text-transform: uppercase;
+        display: block;
+      }
+
+      padding: 0 64px;
+      font-weight: bold;
+      color: @white;
+      text-align: center;
+      font-size:   24px;
+      line-height: 30px;
+    }
 	}
 }
 
@@ -254,7 +282,11 @@ footer {
 }
 
 @media only screen and (min-width: 979px) and (max-width: 1199px) {
-  header .wrapitup p {
+  .header-wrapper {
+    background: transparent url('../img/header-bg.png') no-repeat left -20px;
+  }
+
+  header .wrapitup .heading {
     width: 520px;
     padding: 266px 0 0 361px;
     margin: 0;
@@ -270,7 +302,15 @@ footer {
     margin-bottom: 0;
   }
 
-  header .wrapitup p {
+  .register-announcement .button {
+    margin-bottom: 16px;
+  }
+
+  .header-wrapper {
+    background: transparent url('../img/header-bg.png') no-repeat left -20px;
+  }
+
+  header .wrapitup .heading {
     width: 520px;
     padding: 266px 0 0 168px;
     margin: 0;
@@ -286,11 +326,20 @@ footer {
   body { padding-left: 0; padding-right: 0; }
   nav { padding-left: 20px; padding-right: 20px; }
 
+  .register-announcement {
+    .button { margin-bottom: 16px; }
+    .description { padding: 8px; }
+  }
+
   .navbar-fixed-top { margin-bottom: 0; }
+
+  .header-wrapper {
+    background: transparent url('../img/header-bg.png') no-repeat left -20px;
+  }
 
   header {
     margin-left: -20px;
-    .wrapitup p {
+    .wrapitup .heading {
       width: 520px;
       padding: 266px 0 0 0;
       margin: 0;
@@ -314,10 +363,19 @@ footer {
   body { padding-left: 0; padding-right: 0; }
   nav { padding-left: 20px; padding-right: 20px; }
 
+  .register-announcement {
+    .button { margin-bottom: 16px; }
+    .description { padding: 8px; }
+  }
+
   .navbar-fixed-top { margin-bottom: 0; }
+  .header-wrapper {
+    background: transparent url('../img/header-bg.png') no-repeat -128px -20px;
+  }
+
   header {
     margin-left: -143px;
-    .wrapitup p {
+    .wrapitup .heading {
       width: 359px;
       padding: 266px 0 0 24px;
       margin: 0;
