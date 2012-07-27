@@ -40,7 +40,7 @@ body {
 .navbar {
   z-index: 101;
   text-transform: uppercase;
-  -webkit-box-shadow: 0px 0px 15px #000000;
+  -webkit-box-shadow: 0px 0px 8px #000000;
 }
 
 .navbar .navbar-inner {
@@ -49,7 +49,7 @@ body {
 }
 
 .navbar .nav,
-.navbar p {
+.navbar .ticket-link {
   font-size: 18px;
   font-weight: bold;
 }
@@ -58,17 +58,27 @@ body {
   color: #cccbbe;
 }
 
-.navbar p {
+.navbar .ticket-link {
+  display: block;
   float: right;
   width: 300px;
   margin: 0;
   margin-top: 0;
-  margin-bottom: -30px;
-  line-height: 60px;
+  margin-bottom: -25px;
+  line-height: 50px;
   color: #ffffff;
   text-align: center;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #C8602C;
+  -webkit-border-bottom-right-radius: 2px;
+     -moz-border-bottom-right-radius: 2px;
+          border-bottom-right-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+     -moz-border-bottom-left-radius: 2px;
+          border-bottom-left-radius: 2px;
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding;
+          background-clip: padding-box;
 }
 
 .header-wrapper {
@@ -95,7 +105,7 @@ header .wrapitup {
 
 header .wrapitup .heading {
   width: 520px;
-  padding: 215px 0 0 460px;
+  padding: 215px 0 0 430px;
   margin: 0;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
@@ -179,7 +189,7 @@ footer p a {
 }
 
 .row .span1.plushalf {
-  width: 9.5744680845%;
+  width: 10.2127659568%;
 }
 
 .main .banner {
@@ -273,136 +283,4 @@ footer p a {
 .map-canvas-wrapper #map-canvas {
   width: 100%;
   height: 380px;
-}
-
-@media only screen and (min-width: 1200px) {
-  
-}
-
-@media only screen and (min-width: 979px) and (max-width: 1199px) {
-  .header-wrapper {
-    background: transparent url('../img/header-bg.png') no-repeat left -20px;
-  }
-  header .wrapitup .heading {
-    width: 520px;
-    padding: 266px 0 0 361px;
-    margin: 0;
-  }
-  .map-callout-wrapper .map-callout p {
-    font-size: 18px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 978px) {
-  .navbar-fixed-top {
-    margin-bottom: 0;
-  }
-  .register-announcement .button {
-    margin-bottom: 16px;
-  }
-  .header-wrapper {
-    background: transparent url('../img/header-bg.png') no-repeat left -20px;
-  }
-  header .wrapitup .heading {
-    width: 520px;
-    padding: 266px 0 0 168px;
-    margin: 0;
-  }
-  .map-callout-wrapper .map-callout p {
-    font-size: 14px;
-  }
-}
-
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-  body {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  nav {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-  .register-announcement .button {
-    margin-bottom: 16px;
-  }
-  .register-announcement .description {
-    padding: 8px;
-  }
-  .navbar-fixed-top {
-    margin-bottom: 0;
-  }
-  .header-wrapper {
-    background: transparent url('../img/header-bg.png') no-repeat left -20px;
-  }
-  header {
-    margin-left: -20px;
-  }
-  header .wrapitup .heading {
-    width: 520px;
-    padding: 266px 0 0 0;
-    margin: 0;
-  }
-  .purpose {
-    width: 480px;
-  }
-  .purpose p {
-    font-size: 22px;
-  }
-  .map-callout-wrapper .map-callout p {
-    font-size: 14px;
-  }
-  footer p .space {
-    display: block;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  nav {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-  .register-announcement .button {
-    margin-bottom: 16px;
-  }
-  .register-announcement .description {
-    padding: 8px;
-  }
-  .navbar-fixed-top {
-    margin-bottom: 0;
-  }
-  .header-wrapper {
-    background: transparent url('../img/header-bg.png') no-repeat -128px -20px;
-  }
-  header {
-    margin-left: -143px;
-  }
-  header .wrapitup .heading {
-    width: 359px;
-    padding: 266px 0 0 24px;
-    margin: 0;
-    font-size: 22px;
-  }
-  .purpose {
-    width: 400px;
-    margin-left: -18px;
-  }
-  .purpose p {
-    font-size: 16px;
-  }
-  .purpose .shrink {
-    letter-spacing: -1px;
-  }
-  .main .intro-banner {
-    margin-left: -42px;
-  }
-  .map-callout-wrapper .map-callout p {
-    font-size: 14px;
-  }
-  footer p .space {
-    display: block;
-  }
 }

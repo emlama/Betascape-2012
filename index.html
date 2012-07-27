@@ -12,7 +12,10 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+  <!--
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/responsive-style.min.css">
+  -->
   <link rel="stylesheet" href="css/style.min.css">
 
   <script src='js/app.js'></script>
@@ -22,22 +25,23 @@
 </head>
 <body>
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-  <a id='home'></a>
-
   <nav>
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <ul class="nav">
             <li class="active">
-              <a href="#about">Home</a>
+              <a data-target='home' href="#home">Home</a>
             </li>
             <li>
-              <a href="#map">Schedule</a>
+              <a data-target='map' href="#map">Map</a>
+            </li>
+            <li>
+              <a data-target='schedule' href="#schedule">Schedule</a>
             </li>
             <li><a href="2011/">Betascape 2011</a></li>
           </ul>
-          <p>TICKETS AVAILABLE NOW</p>
+          <a class='ticket-link' href='http://betascape2012.eventbrite.com'>TICKETS AVAILABLE NOW</a>
         </div>
       </div>
     </div>
@@ -60,6 +64,7 @@
 
   <div class='container'>
     <div class='row section'>
+      <a id='home'></a>
       <div class='span10 offset1 lead-callout'>
         <p>
           This exploratorium is designed for
@@ -126,8 +131,8 @@
 	  </div>
   </div>
 
-  <a id='map'></a>
   <div class='map-canvas-wrapper container'>
+    <a id='map'></a>
     <div id="map-canvas">
     </div>
   </div>

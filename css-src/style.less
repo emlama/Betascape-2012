@@ -1,7 +1,7 @@
 @import "bootstrap/variables.less";
 @import "bootstrap/mixins.less";
 
-@boxShadow: 0px 0px 15px #000;
+@boxShadow: 0px 0px 8px #000;
 @white: #fff;
 @offWhite: #F2EFCE;
 @black: #101010;
@@ -15,6 +15,18 @@
 @theme-orange: #C95F38;
 
 // mixins
+.border-bottom-radius(@radius: 2px) {
+  -webkit-border-bottom-left-radius: @radius;
+  -webkit-border-bottom-right-radius: @radius;
+     -moz-border-bottom-left-radius: @radius;
+     -moz-border-bottom-right-radius: @radius;
+          border-bottom-left-radius: @radius;
+          border-bottom-right-radius: @radius;
+
+   -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+           background-clip: padding-box;
+}
 .border-radius(@radius: 2px) {
   -webkit-border-radius: @radius;
   -moz-border-radius: @radius;
@@ -62,7 +74,7 @@ body {
     color: @grayLighter;
   }
 
-  .nav, p {
+  .nav, .ticket-link {
     font-size: 18px;
     font-weight: bold;
   }
@@ -71,17 +83,19 @@ body {
     color: @grayLighter;
   }
 
-  p {
+  .ticket-link {
     text-align: center;
     float: right;
     margin: 0;
     margin-top: 0;
-    margin-bottom: -30px;
-    line-height: 60px;
+    margin-bottom: -25px;
+    line-height: 50px;
     background-color: #C8602C;
     width: 300px;
     color: @white;
+    display: block;
     .embossed();
+    .border-bottom-radius(2px);
   }
 
 	z-index: 101;
@@ -111,7 +125,7 @@ header {
     .heading {
       .embossed();
       width: 520px;
-      padding: 215px 0 0 460px;
+      padding: 215px 0 0 430px;
       margin: 0;
       small {
         font-weight: bold;
@@ -181,7 +195,7 @@ footer {
 }
 
 .row .span1.plushalf {
-  width: @fluidGridColumnWidth * 1.5;
+  width: @fluidGridColumnWidth * 1.6;
 }
 
 .main {
@@ -273,133 +287,5 @@ footer {
     width: 100%;
     height: 380px;
   }
-}
-
-// MEDIA QUERIES
-
-// big desktop
-@media only screen and (min-width: 1200px) {
-}
-
-@media only screen and (min-width: 979px) and (max-width: 1199px) {
-  .header-wrapper {
-    background: transparent url('../img/header-bg.png') no-repeat left -20px;
-  }
-
-  header .wrapitup .heading {
-    width: 520px;
-    padding: 266px 0 0 361px;
-    margin: 0;
-  }
-
-  .map-callout-wrapper .map-callout p {
-    font-size: 18px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 978px) {
-  .navbar-fixed-top {
-    margin-bottom: 0;
-  }
-
-  .register-announcement .button {
-    margin-bottom: 16px;
-  }
-
-  .header-wrapper {
-    background: transparent url('../img/header-bg.png') no-repeat left -20px;
-  }
-
-  header .wrapitup .heading {
-    width: 520px;
-    padding: 266px 0 0 168px;
-    margin: 0;
-  }
-
-  .map-callout-wrapper .map-callout p {
-    font-size: 14px;
-  }
-}
-
-// landscape phone to small desktop & portrait tablet
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-  body { padding-left: 0; padding-right: 0; }
-  nav { padding-left: 20px; padding-right: 20px; }
-
-  .register-announcement {
-    .button { margin-bottom: 16px; }
-    .description { padding: 8px; }
-  }
-
-  .navbar-fixed-top { margin-bottom: 0; }
-
-  .header-wrapper {
-    background: transparent url('../img/header-bg.png') no-repeat left -20px;
-  }
-
-  header {
-    margin-left: -20px;
-    .wrapitup .heading {
-      width: 520px;
-      padding: 266px 0 0 0;
-      margin: 0;
-    }
-  }
-
-  .purpose {
-    width: 480px;
-    p { font-size: 22px; }
-  }
-
-  .map-callout-wrapper .map-callout p {
-    font-size: 14px;
-  }
-
-  footer p .space { display: block; }
-}
-
-// landscape phone
-@media (max-width: 480px) {
-  body { padding-left: 0; padding-right: 0; }
-  nav { padding-left: 20px; padding-right: 20px; }
-
-  .register-announcement {
-    .button { margin-bottom: 16px; }
-    .description { padding: 8px; }
-  }
-
-  .navbar-fixed-top { margin-bottom: 0; }
-  .header-wrapper {
-    background: transparent url('../img/header-bg.png') no-repeat -128px -20px;
-  }
-
-  header {
-    margin-left: -143px;
-    .wrapitup .heading {
-      width: 359px;
-      padding: 266px 0 0 24px;
-      margin: 0;
-      font-size: 22px;
-    }
-  }
-
-  .purpose {
-    width: 400px;
-    margin-left: -18px;
-    p { font-size: 16px; }
-    .shrink {
-      letter-spacing: -1px;
-    }
-  }
-
-  .main .intro-banner {
-    margin-left: -42px;
-  }
-
-  .map-callout-wrapper .map-callout p {
-    font-size: 14px;
-  }
-
-  footer p .space { display: block; }
 }
 

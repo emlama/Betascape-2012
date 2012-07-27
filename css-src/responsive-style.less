@@ -1,0 +1,128 @@
+// MEDIA QUERIES
+
+// big desktop
+@media only screen and (min-width: 1200px) {
+}
+
+@media only screen and (min-width: 979px) and (max-width: 1199px) {
+  .header-wrapper {
+    background: transparent url('../img/header-bg.png') no-repeat left -20px;
+  }
+
+  header .wrapitup .heading {
+    width: 520px;
+    padding: 266px 0 0 361px;
+    margin: 0;
+  }
+
+  .map-callout-wrapper .map-callout p {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 978px) {
+  .navbar-fixed-top {
+    margin-bottom: 0;
+  }
+
+  .register-announcement .button {
+    margin-bottom: 16px;
+  }
+
+  .header-wrapper {
+    background: transparent url('../img/header-bg.png') no-repeat left -20px;
+  }
+
+  header .wrapitup .heading {
+    width: 520px;
+    padding: 266px 0 0 168px;
+    margin: 0;
+  }
+
+  .map-callout-wrapper .map-callout p {
+    font-size: 14px;
+  }
+}
+
+// landscape phone to small desktop & portrait tablet
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  body { padding-left: 0; padding-right: 0; }
+  nav { padding-left: 20px; padding-right: 20px; }
+
+  .register-announcement {
+    .button { margin-bottom: 16px; }
+    .description { padding: 8px; }
+  }
+
+  .navbar-fixed-top { margin-bottom: 0; }
+
+  .header-wrapper {
+    background: transparent url('../img/header-bg.png') no-repeat left -20px;
+  }
+
+  header {
+    margin-left: -20px;
+    .wrapitup .heading {
+      width: 520px;
+      padding: 266px 0 0 0;
+      margin: 0;
+    }
+  }
+
+  .purpose {
+    width: 480px;
+    p { font-size: 22px; }
+  }
+
+  .map-callout-wrapper .map-callout p {
+    font-size: 14px;
+  }
+
+  footer p .space { display: block; }
+}
+
+// landscape phone
+@media (max-width: 480px) {
+  body { padding-left: 0; padding-right: 0; }
+  nav { padding-left: 20px; padding-right: 20px; }
+
+  .register-announcement {
+    .button { margin-bottom: 16px; }
+    .description { padding: 8px; }
+  }
+
+  .navbar-fixed-top { margin-bottom: 0; }
+  .header-wrapper {
+    background: transparent url('../img/header-bg.png') no-repeat -128px -20px;
+  }
+
+  header {
+    margin-left: -143px;
+    .wrapitup .heading {
+      width: 359px;
+      padding: 266px 0 0 24px;
+      margin: 0;
+      font-size: 22px;
+    }
+  }
+
+  .purpose {
+    width: 400px;
+    margin-left: -18px;
+    p { font-size: 16px; }
+    .shrink {
+      letter-spacing: -1px;
+    }
+  }
+
+  .main .intro-banner {
+    margin-left: -42px;
+  }
+
+  .map-callout-wrapper .map-callout p {
+    font-size: 14px;
+  }
+
+  footer p .space { display: block; }
+}
+
