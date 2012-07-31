@@ -201,7 +201,8 @@ footer {
 .main {
 	.banner {
     padding: 14px;
-    background: @theme-orange;
+    background: url('/img/banner.png') no-repeat 0 0 transparent;
+		min-height: 115px;
 
     p {
       text-align: center;
@@ -211,9 +212,10 @@ footer {
         font-size: 14px;
         text-transform: uppercase;
         display: block;
+				margin-bottom: 10px;
       }
 
-      padding: 0 64px;
+      padding: 0 85px;
       font-weight: bold;
       color: @white;
       text-align: center;
@@ -240,15 +242,15 @@ footer {
 
   .map-callout {
     position: absolute;
-    padding: 18px;
-    background: white;
+    padding: 47px 0 26px 57px;
+    background: url('/img/map_banner.png') no-repeat scroll 0 0 transparent;
     z-index: 99;
-    .box-shadow(0 0 12px, 60%);
-    margin-top: -224px;
+    margin-top: -173px;
     p {
       font-size: 20px;
       line-height: 24px;
       color: black;
+			font-weight: bold;
     }
   }
 }

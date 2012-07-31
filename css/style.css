@@ -193,12 +193,13 @@ footer p a {
 }
 
 .main .banner {
+  min-height: 115px;
   padding: 14px;
-  background: #c95f38;
+  background: url('/img/banner.png') no-repeat 0 0 transparent;
 }
 
 .main .banner p {
-  padding: 0 64px;
+  padding: 0 85px;
   font-size: 24px;
   font-weight: bold;
   line-height: 30px;
@@ -209,6 +210,7 @@ footer p a {
 
 .main .banner p small {
   display: block;
+  margin-bottom: 10px;
   font-size: 14px;
   color: #ffffff;
   text-transform: uppercase;
@@ -234,16 +236,14 @@ footer p a {
 .map-callout-wrapper .map-callout {
   position: absolute;
   z-index: 99;
-  padding: 18px;
-  margin-top: -224px;
-  background: white;
-  -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
-     -moz-box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
-          box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+  padding: 47px 0 26px 57px;
+  margin-top: -173px;
+  background: url('/img/map_banner.png') no-repeat scroll 0 0 transparent;
 }
 
 .map-callout-wrapper .map-callout p {
   font-size: 20px;
+  font-weight: bold;
   line-height: 24px;
   color: black;
 }
