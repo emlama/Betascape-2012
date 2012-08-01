@@ -1290,7 +1290,8 @@
     this.$scrollElement = $element.on('scroll.scroll.data-api', process)
     this.selector = (this.options.target
       || ((href = $(element).attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
-      || '') + ' .nav li > a'
+      || '') + ' .subNavCheat li > a'
+		console.log(this.selector)
     this.$body = $('body')
     this.refresh()
     this.process()
@@ -1325,6 +1326,7 @@
       }
 
     , process: function () {
+				console.log('process called')
         var scrollTop = this.$scrollElement.scrollTop() + this.options.offset
           , scrollHeight = this.$scrollElement[0].scrollHeight || this.$body[0].scrollHeight
           , maxScroll = scrollHeight - this.$scrollElement.height()
@@ -1344,6 +1346,7 @@
             && (!offsets[i + 1] || scrollTop <= offsets[i + 1])
             && this.activate( targets[i] )
         }
+
       }
 
     , activate: function (target) {
@@ -1351,7 +1354,7 @@
           , selector
 
         this.activeTarget = target
-
+				
         $(this.selector)
           .parent('.active')
           .removeClass('active')
@@ -1382,6 +1385,7 @@
       var $this = $(this)
         , data = $this.data('scrollspy')
         , options = typeof option == 'object' && option
+			console.log($this);
       if (!data) $this.data('scrollspy', (data = new ScrollSpy(this, options)))
       if (typeof option == 'string') data[option]()
     })

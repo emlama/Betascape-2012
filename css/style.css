@@ -83,6 +83,21 @@ body {
           background-clip: padding-box;
 }
 
+.subnav {
+  background: #ffffff;
+}
+
+.subnav .nav > li > a {
+  font-size: 14px;
+  font-weight: normal;
+  color: #767676;
+  text-shadow: none;
+}
+
+.subnav .nav > li > a:hover {
+  color: #33a0bc;
+}
+
 .header-wrapper {
   width: 100%;
   height: 515px;

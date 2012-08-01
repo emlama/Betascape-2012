@@ -25,4 +25,6 @@
     });
   });
 
+  $('#navbar').scrollspy();
+
 }).call(this);
