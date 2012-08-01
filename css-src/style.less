@@ -34,6 +34,13 @@
   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 }
 
+.rotate (@deg) {
+	-webkit-transform: rotate(@deg);
+	-moz-transform: 	 rotate(@deg);
+	-ms-transform: 		 rotate(@deg);
+	-o-transform: 		 rotate(@deg);
+}
+
 .antialias() {
   -webkit-font-smoothing: antialiased;
 }
@@ -81,6 +88,8 @@ body {
 
   .nav > li > a {
     color: @grayLighter;
+		padding-bottom: 9px;
+		line-height: 25px;
   }
 
   .ticket-link {
@@ -103,8 +112,8 @@ body {
 }
 
 .header-wrapper {
-	background: transparent url('../img/header-bg.png') no-repeat center -10px;
-	height: 500px;
+	background: transparent url('../img/header-bg.png') no-repeat center 10px;
+	height: 515px;
   width: 100%;
 }
 
@@ -115,9 +124,7 @@ header {
 		color: @offWhite;
 		margin: 0 auto;
 		width: 960px;
-		-webkit-transform: rotate(-4deg);
-       -moz-transform: rotate(-4deg);
-            transform: rotate(-4deg);
+		.rotate(-4deg);
 		font-weight: bold;
 		font-size: 30px;
     line-height: 40px;
@@ -125,7 +132,7 @@ header {
     .heading {
       .embossed();
       width: 520px;
-      padding: 215px 0 0 430px;
+      padding: 233px 0 0 452px;
       margin: 0;
       small {
         font-weight: bold;
@@ -162,36 +169,46 @@ footer {
 }
 
 .lead-callout {
-  font-size: 38px;
-  line-height: 42px;
+  font-size: 40px;
+  line-height: 1.3em;
   font-weight: bold;
   text-align: center;
+	p {
+		padding: 35px 115px 50px;
+	}
 }
 
 .callout-1 { color: @theme-blue; }
 .callout-2 { color: @theme-green; }
 .callout-3 { color: @theme-orange; }
 
-@register-button-height: 120px;
+@register-button-height: 155px;
 .register-announcement {
-  a.button {
-    .border-radius(6px);
-    background: lighten(@theme-blue, 10%);
-    color: lighten(@black, 10%);
-    display: block;
-    font-size: 26px;
-    font-weight: bold;
-    height:      @register-button-height;
-    line-height: @register-button-height;
-    text-align: center;
-    width: 100%;
-    cursor: url('../img/pointer-icon-big.gif'),auto;
-  }
+	margin-top: 26px;
+	margin-bottom: 130px;
+	.button {
+		width: 360px;
+		margin-left: 65px;
+		float: left;
+	  a {
+	    .border-radius(12px);
+	    background: lighten(@theme-blue, 10%);
+	    color: lighten(@black, 10%);
+	    display: block;
+	    font-size: 26px;
+	    font-weight: bold;
+	    height:      @register-button-height;
+	    line-height: @register-button-height;
+	    text-align: center;
+	    width: 100%;
+	    cursor: url('../img/pointer-icon-big.gif'),auto;
+	  }
+	}
 
   .description {
     color: @black;
     font-size: 24px;
-    line-height: 24px;
+    line-height: 30px;
   }
 }
 
@@ -210,13 +227,14 @@ footer {
 
       small {
         color: @white;
-        font-size: 14px;
+        font-size: 15px;
         text-transform: uppercase;
         display: block;
-				margin-bottom: 10px;
+				font-weight: bold;
+				margin-bottom: 8px;
       }
 
-      padding: 10px 105px 0;
+      padding: 8px 105px 0;
       color: @white;
       text-align: center;
       font-size:   24px;
@@ -226,14 +244,15 @@ footer {
 }
 
 .row.separate {
-  margin-top: 72px;
+  margin-top: 53px;
 }
 
 .subject {
   text-align: center;
   .caption {
-    margin-top: 4px;
-    font-size: 16px;
+    margin-top: 24px;
+    font-size: 18px;
+		font-weight: bold;
   }
 }
 
@@ -244,12 +263,12 @@ footer {
 		position: relative;
 	}
 	.paper {
-	  -moz-transform: rotate(-9deg);
+		.rotate(-10deg);
 	  background-color: rgba(255, 255, 255, 0.5);
-	  bottom: -200px;
+	  bottom: -240px;
 	  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2), 0 -5px 5px rgba(0, 0, 0, 0.2);
 	  position: absolute;
-	  top: 480px;
+	  top: 720px;
 	  width: 88%;
 	  z-index: 1;
 	}
@@ -258,6 +277,16 @@ footer {
 .map-canvas-wrapper {
 	z-index: 99;
 	position: relative;
+  width: 100%;
+  background: #fff;
+  padding: 9px 0;
+  margin: 97px 0 120px;
+  .multi-box-shadow(0 5px 5px, 0 -5px 5px, 20%);
+
+  #map-canvas {
+    width: 100%;
+    height: 380px;
+  }
 }
 
 .map-callout-wrapper {
@@ -268,7 +297,7 @@ footer {
     padding: 47px 0 26px 57px;
     background: url('../img/map_banner.png') no-repeat scroll 0 0 transparent;
     z-index: 99;
-    margin-top: -173px;
+    margin-top: -244px;
     p {
       font-size: 20px;
       line-height: 24px;
@@ -315,17 +344,3 @@ footer {
 		border-radius: 4px;
 	}
 }
-
-.map-canvas-wrapper {
-  width: 100%;
-  background: #fff;
-  padding: 12px 0;
-  margin: 48px 0;
-  .multi-box-shadow(0 5px 5px, 0 -5px 5px, 20%);
-
-  #map-canvas {
-    width: 100%;
-    height: 380px;
-  }
-}
-

@@ -55,6 +55,8 @@ body {
 }
 
 .navbar .nav > li > a {
+  padding-bottom: 9px;
+  line-height: 25px;
   color: #cccbbe;
 }
 
@@ -83,8 +85,8 @@ body {
 
 .header-wrapper {
   width: 100%;
-  height: 500px;
-  background: transparent url('../img/header-bg.png') no-repeat center -10px;
+  height: 515px;
+  background: transparent url('/img/header-bg.png') no-repeat center 10px;
 }
 
 header {
@@ -99,13 +101,19 @@ header .wrapitup {
   line-height: 40px;
   color: #f2efce;
   -webkit-transform: rotate(-4deg);
+  -webkit-transform: rotate(-4deg);
      -moz-transform: rotate(-4deg);
+     -moz-transform: rotate(-4deg);
+      -ms-transform: rotate(-4deg);
+      -ms-transform: rotate(-4deg);
+       -o-transform: rotate(-4deg);
+       -o-transform: rotate(-4deg);
           transform: rotate(-4deg);
 }
 
 header .wrapitup .heading {
   width: 520px;
-  padding: 215px 0 0 430px;
+  padding: 233px 0 0 452px;
   margin: 0;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
@@ -143,10 +151,14 @@ footer p a {
 }
 
 .lead-callout {
-  font-size: 38px;
+  font-size: 40px;
   font-weight: bold;
-  line-height: 42px;
+  line-height: 1.3em;
   text-align: center;
+}
+
+.lead-callout p {
+  padding: 35px 115px 50px;
 }
 
 .callout-1 {
@@ -161,23 +173,34 @@ footer p a {
   color: #c95f38;
 }
 
-.register-announcement a.button {
+.register-announcement {
+  margin-top: 26px;
+  margin-bottom: 130px;
+}
+
+.register-announcement .button {
+  float: left;
+  width: 360px;
+  margin-left: 65px;
+}
+
+.register-announcement .button a {
   display: block;
   width: 100%;
-  height: 120px;
+  height: 155px;
   font-size: 26px;
   font-weight: bold;
-  line-height: 120px;
+  line-height: 155px;
   color: #2a2a2a;
   text-align: center;
   cursor: url('../img/pointer-icon-big.gif'), auto;
   background: #52b6d0;
-  -webkit-border-radius: 6px;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
-  border-radius: 6px;
+  -webkit-border-radius: 12px;
+  -webkit-border-radius: 12px;
+     -moz-border-radius: 12px;
+     -moz-border-radius: 12px;
+          border-radius: 12px;
+  border-radius: 12px;
   -webkit-background-clip: padding-box;
      -moz-background-clip: padding;
           background-clip: padding-box;
@@ -185,7 +208,7 @@ footer p a {
 
 .register-announcement .description {
   font-size: 24px;
-  line-height: 24px;
+  line-height: 30px;
   color: #101010;
 }
 
@@ -200,7 +223,7 @@ footer p a {
 }
 
 .main .banner p {
-  padding: 10px 105px 0;
+  padding: 8px 105px 0;
   font-size: 24px;
   line-height: 30px;
   color: #ffffff;
@@ -210,14 +233,15 @@ footer p a {
 
 .main .banner p small {
   display: block;
-  margin-bottom: 10px;
-  font-size: 14px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: bold;
   color: #ffffff;
   text-transform: uppercase;
 }
 
 .row.separate {
-  margin-top: 72px;
+  margin-top: 53px;
 }
 
 .subject {
@@ -225,8 +249,9 @@ footer p a {
 }
 
 .subject .caption {
-  margin-top: 4px;
-  font-size: 16px;
+  margin-top: 24px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .paper-wrapper {
@@ -240,18 +265,38 @@ footer p a {
 
 .paper-wrapper .paper {
   position: absolute;
-  top: 480px;
-  bottom: -200px;
+  top: 720px;
+  bottom: -240px;
   z-index: 1;
   width: 88%;
   background-color: rgba(255, 255, 255, 0.5);
-  -moz-transform: rotate(-9deg);
+  -webkit-transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+     -moz-transform: rotate(-10deg);
+     -moz-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+       -o-transform: rotate(-10deg);
+       -o-transform: rotate(-10deg);
+          transform: rotate(-10deg);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2), 0 -5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .map-canvas-wrapper {
   position: relative;
   z-index: 99;
+  width: 100%;
+  padding: 9px 0;
+  margin: 97px 0 120px;
+  background: #fff;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0 -5px 5px rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0 -5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0 -5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.map-canvas-wrapper #map-canvas {
+  width: 100%;
+  height: 380px;
 }
 
 .map-callout-wrapper {
@@ -262,8 +307,13 @@ footer p a {
   position: absolute;
   z-index: 99;
   padding: 47px 0 26px 57px;
+<<<<<<< HEAD
   margin-top: -173px;
   background: url('../img/map_banner.png') no-repeat scroll 0 0 transparent;
+=======
+  margin-top: -244px;
+  background: url('/img/map_banner.png') no-repeat scroll 0 0 transparent;
+>>>>>>> Lots of nip-n-tuck to get the site looking like the design.
 }
 
 .map-callout-wrapper .map-callout p {
@@ -310,19 +360,4 @@ footer p a {
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
-}
-
-.map-canvas-wrapper {
-  width: 100%;
-  padding: 12px 0;
-  margin: 48px 0;
-  background: #fff;
-  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0 -5px 5px rgba(0, 0, 0, 0.2);
-     -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0 -5px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0 -5px 5px rgba(0, 0, 0, 0.2);
-}
-
-.map-canvas-wrapper #map-canvas {
-  width: 100%;
-  height: 380px;
 }
