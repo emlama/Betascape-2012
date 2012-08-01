@@ -202,12 +202,11 @@
   <script src="js/plugins.js"></script>
   <script src="js/application.js"></script>
   -->
-
   <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
+    var _gaq=[["_setAccount","UA-16287734-1"],["_trackPageview"]];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+    s.parentNode.insertBefore(g,s)}(document,"script"));
   </script>
 
   <script src='http://maps.googleapis.com/maps/api/js?key=AIzaSyAY_P8p0Qolf9MfXSvw9dTPmnmm900bP7w&sensor=false'></script>
@@ -254,12 +253,39 @@
         zoomControlOptions: {
           style: google.maps.ZoomControlStyle.SMALL
         },
-        center: new google.maps.LatLng(39.30577,-76.619399),
+        center: new google.maps.LatLng(39.30845993937798, -76.62171006202698),
         mapTypeId: google.maps.MapTypeId.ROADMAP
       };
 
       var map = new google.maps.Map(document.getElementById('map-canvas'),
           mapOptions);
+
+			var markerImage = '/img/marker.png';
+			
+			var falveyLatlng = new google.maps.LatLng(39.30828560973389, -76.6210126876831);
+			var gatewayLatlng = new google.maps.LatLng(39.31042734382593, -76.62373781204224);
+			var mainBldgLatlng = new google.maps.LatLng(39.3075550807882, -76.6215705871582);
+			
+			var falveyMarker = new google.maps.Marker({
+					position: falveyLatlng,
+					map: map,
+					title:"Falvey Hall",
+					icon: markerImage
+			});
+			
+			var gatewayMarker = new google.maps.Marker({
+					position: gatewayLatlng,
+					map: map,
+					title:"Gateway Building",
+					icon: markerImage
+			});
+			
+			var mainBldgMarker = new google.maps.Marker({
+					position: mainBldgLatlng,
+					map: map,
+					title:"Main Building",
+					icon: markerImage
+			});
     }
     $(function () {
       initializeMap();
