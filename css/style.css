@@ -86,7 +86,7 @@ body {
 .header-wrapper {
   width: 100%;
   height: 515px;
-  background: transparent url('/img/header-bg.png') no-repeat center 10px;
+  background: transparent url('../img/header-bg.png') no-repeat center 10px;
 }
 
 header {
@@ -307,13 +307,8 @@ footer p a {
   position: absolute;
   z-index: 99;
   padding: 47px 0 26px 57px;
-<<<<<<< HEAD
-  margin-top: -173px;
-  background: url('../img/map_banner.png') no-repeat scroll 0 0 transparent;
-=======
   margin-top: -244px;
-  background: url('/img/map_banner.png') no-repeat scroll 0 0 transparent;
->>>>>>> Lots of nip-n-tuck to get the site looking like the design.
+  background: url('../img/map_banner.png') no-repeat scroll 0 0 transparent;
 }
 
 .map-callout-wrapper .map-callout p {
