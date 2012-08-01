@@ -170,7 +170,7 @@ footer p a {
   line-height: 120px;
   color: #2a2a2a;
   text-align: center;
-  cursor: url('/img/pointer-icon-big.gif'), auto;
+  cursor: url('../img/pointer-icon-big.gif'), auto;
   background: #52b6d0;
   -webkit-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -196,7 +196,7 @@ footer p a {
 .main .banner {
   min-height: 115px;
   padding: 14px;
-  background: url('/img/banner.png') no-repeat 0 0 transparent;
+  background: url('../img/banner.png') no-repeat 0 0 transparent;
 }
 
 .main .banner p {
@@ -263,7 +263,7 @@ footer p a {
   z-index: 99;
   padding: 47px 0 26px 57px;
   margin-top: -173px;
-  background: url('/img/map_banner.png') no-repeat scroll 0 0 transparent;
+  background: url('../img/map_banner.png') no-repeat scroll 0 0 transparent;
 }
 
 .map-callout-wrapper .map-callout p {
