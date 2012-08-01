@@ -216,8 +216,7 @@ footer {
 				margin-bottom: 10px;
       }
 
-      padding: 0 85px;
-      font-weight: bold;
+      padding: 10px 105px 0;
       color: @white;
       text-align: center;
       font-size:   24px;
@@ -236,6 +235,29 @@ footer {
     margin-top: 4px;
     font-size: 16px;
   }
+}
+
+.paper-wrapper {
+	position: relative;
+	.container {
+		z-index: 99;
+		position: relative;
+	}
+	.paper {
+	  -moz-transform: rotate(-9deg);
+	  background-color: rgba(255, 255, 255, 0.5);
+	  bottom: -200px;
+	  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2), 0 -5px 5px rgba(0, 0, 0, 0.2);
+	  position: absolute;
+	  top: 480px;
+	  width: 88%;
+	  z-index: 1;
+	}
+}
+
+.map-canvas-wrapper {
+	z-index: 99;
+	position: relative;
 }
 
 .map-callout-wrapper {

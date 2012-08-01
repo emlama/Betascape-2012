@@ -200,9 +200,8 @@ footer p a {
 }
 
 .main .banner p {
-  padding: 0 85px;
+  padding: 10px 105px 0;
   font-size: 24px;
-  font-weight: bold;
   line-height: 30px;
   color: #ffffff;
   text-align: center;
@@ -228,6 +227,31 @@ footer p a {
 .subject .caption {
   margin-top: 4px;
   font-size: 16px;
+}
+
+.paper-wrapper {
+  position: relative;
+}
+
+.paper-wrapper .container {
+  position: relative;
+  z-index: 99;
+}
+
+.paper-wrapper .paper {
+  position: absolute;
+  top: 480px;
+  bottom: -200px;
+  z-index: 1;
+  width: 88%;
+  background-color: rgba(255, 255, 255, 0.5);
+  -moz-transform: rotate(-9deg);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2), 0 -5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.map-canvas-wrapper {
+  position: relative;
+  z-index: 99;
 }
 
 .map-callout-wrapper {
