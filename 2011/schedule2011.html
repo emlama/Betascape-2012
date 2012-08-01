@@ -127,33 +127,33 @@
 $(function(){
   betascape.changeCurrent('schedule')
 
-  betascape.getPresenters(function(presenters){
-      byPresentType=_.groupBy(presenters,function(presentor){return presentor.lectureType;});
-
-      var workshops = byPresentType["Workshops"];
-      var splitWorkshops=_.groupBy(workshops,function(p){return parseInt(p.trackNumber[0]);});
-
-      byPresentType["Workshops @ Baltimore Node"]=splitWorkshops[1];
-      byPresentType["Workshops @ Load of Fun Theatre"]=splitWorkshops[2];
-      byPresentType["Workshops @ Hour Haus"]=splitWorkshops[3];
-      delete byPresentType["Workshops"];
-
-      var listTmpl=_.template($('#final-schedule-template').html());
-      var html=listTmpl({byPresentType : byPresentType});
-
-      $('.finalSchedule').prepend(html);
-
-      var listTmplate=_.template($('#ccf').html());
-      var htmlCCF=listTmplate({byPresentType : byPresentType});
-
-      $('.ccf').append(htmlCCF);
-
-      $('table.events .more').hide();
-      $('table.events .exhibit-title').click(function(evt){
-        var found = $(this).parent().find('.more').slideToggle();
-        evt.preventDefault();
-      });
-  });
+  // betascape.getPresenters(function(presenters){
+  //     byPresentType=_.groupBy(presenters,function(presentor){return presentor.lectureType;});
+  // 
+  //     var workshops = byPresentType["Workshops"];
+  //     var splitWorkshops=_.groupBy(workshops,function(p){return parseInt(p.trackNumber[0]);});
+  // 
+  //     byPresentType["Workshops @ Baltimore Node"]=splitWorkshops[1];
+  //     byPresentType["Workshops @ Load of Fun Theatre"]=splitWorkshops[2];
+  //     byPresentType["Workshops @ Hour Haus"]=splitWorkshops[3];
+  //     delete byPresentType["Workshops"];
+  // 
+  //     var listTmpl=_.template($('#final-schedule-template').html());
+  //     var html=listTmpl({byPresentType : byPresentType});
+  // 
+  //     $('.finalSchedule').prepend(html);
+  // 
+  //     var listTmplate=_.template($('#ccf').html());
+  //     var htmlCCF=listTmplate({byPresentType : byPresentType});
+  // 
+  //     $('.ccf').append(htmlCCF);
+  // 
+  //     $('table.events .more').hide();
+  //     $('table.events .exhibit-title').click(function(evt){
+  //       var found = $(this).parent().find('.more').slideToggle();
+  //       evt.preventDefault();
+  //     });
+  // });
 });
 
 </script>
@@ -257,8 +257,722 @@ $(function(){
 
   <h2 class="saturday_am">Saturday 9AM - 5PM: Lectures, Workshops &amp; Conversations</h2>
   <div class="finalSchedule">
+
   
-    <header class="car">AFKFest 2011 Car Computer Festival & Speaker Series</header>
+   
+   
+     
+     
+  
+      <header class="Conversations">Conversations</header>
+      <table class="events striped">
+        <tbody><tr>
+          <th width="4%">Starts</th>
+          <th width="4%">Ends</th>
+          <th width="46%" class="lectures">
+            Conversations
+          </th>
+          <th>Hosted By</th>
+        </tr>
+        
+            <tr>
+              <td width="4%">10am</td>
+              <td width="4%">10:40am</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#mp3car" class="exhibit-title">AFKFest Conversation</a><br>
+                <div class="more" style="display: none;">
+                  Members of the mp3Car Forums, the oldest and largest car computing forum in the world, will get together to present informal lectures and discussion on topics related to installing car computers and developing software.
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#mp3car">MP3Car</a></span>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">10:45am</td>
+              <td width="4%">11:25am</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#mp3car" class="exhibit-title">AFKFest Conversation</a><br>
+                <div class="more" style="display: none;">
+                  Members of the mp3Car Forums, the oldest and largest car computing forum in the world, will get together to present informal lectures and discussion on topics related to installing car computers and developing software.
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#mp3car">MP3Car</a></span>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">11:30am</td>
+              <td width="4%">12:10am</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#josephyoung" class="exhibit-title">Once the Internet Comes, Will Writers Be Dead?</a><br>
+                <div class="more" style="display: none;">
+                  We know that Facebook makes us jerks and blogs make us lazy, we’re told this most days by people who know better, but just how are writers using this new technology called the Internet? Three great writers, Dorothea Lasky, Blake Butler, and Mike Young, discuss how they use e-technology to work what they call writing. Topics potentially under discussion include scheduling an online book tour from your apartment, dealing with literate blog trolls, and looking young, smart, and poetic on YouTube.  
+
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#josephyoung">Joseph Young</a></span>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">12:15am</td>
+              <td width="4%">12:55am</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#mixtum" class="exhibit-title">Mixtum: An Instrument for Randomly Selecting a Trio of Symbols to Help Generate Unexpected Ideas</a><br>
+                <div class="more" style="display: none;">
+                  Mixtum began as a futurist laboratory tool for preschool children. A central idea of futures oriented education is to help people create their own alternatives to the dominant view of the future. This process requires creativity, inventive questioning, and considering diverse possibilities. Mixtum prompts players to exercise these skills, which are applicable not only for preschool children but to students and practitioners of art, writing, movement, music and anyone else interested in the fringes of human imagination.  
+
+Come learn about how this game came to be and stick around to play Mixtum and to engage with a musical project inspired by Mixtum.
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#mixtum">Mixtum</a></span>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">2:00pm</td>
+              <td width="4%">2:40pm</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#mikesubelsky" class="exhibit-title">Art &amp; Code</a><br>
+                <div class="more" style="display: none;">
+                  Mike Subelsky will facilitate a panel of smart software creators discussing their careers and to what extent modern making software has become a craft and an art form. Panelists include Zach Waugh of Figure53, Shervonne Cherry of Mindgrub Technologies, Dr. Amy Hurst of UMBC and Bryan Liles of Smartic.us.
+
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#mikesubelsky">Mike Subelsky</a></span>
+                
+                      <a href="http://twitter.com/@subelsky" class="twitter" target="_blank">@subelsky</a>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">2:45pm</td>
+              <td width="4%">3:25pm</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#nealshaffer" class="exhibit-title">Everyone's a publisher. What now?</a><br>
+                <div class="more" style="display: none;">
+                  We've reached the point where everyone is a publisher. Everyone who wants to be and even some who don't. Whether it's social networking like Twitter or Facebook or Google+ or a more robust platform like a personal blog or website, publishing is no longer something for which an individual or business needs permission. The tools are there, and they work.
+
+Great. Now what?
+
+Just because everyone can publish doesn't mean everyone is good at it. To do it well requires strategy and smart thinking on both the creative side and the business/tech side. 
+
+This talk -- which will include panelists from the Baltimore media and business communities -- will explore the intersection of public communication with individual goals and responsibilities. The goal is to help foster an understanding of what it means to use these tools, how to use them well, and what pitfalls to avoid.
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#nealshaffer">Neal Shaffer</a></span>
+                
+                      <a href="http://twitter.com/@slantsixneal" class="twitter" target="_blank">@slantsixneal</a>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">3:30pm</td>
+              <td width="4%">4:10pm</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#bytenyte" class="exhibit-title">The Byte Nyte Chiptunes Scene: What how and why!</a><br>
+                <div class="more" style="display: none;">
+                  Presentation and discussion with musicians, artists and documentary film makers within the chiptune scene. What, how and why we do what we do and how you can get involved.
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#bytenyte">Byte Nyte</a></span>
+                
+                      <a href="http://twitter.com/@bytenyte" class="twitter" target="_blank">@bytenyte</a>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">4:15pm</td>
+              <td width="4%">4:55pm</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#myramargolin" class="exhibit-title">Youth Media, Art &amp; Technology</a><br>
+                <div class="more" style="display: none;">
+                      Youth and staff from Wide Angle Youth Media will present and facilitate a conversation about youth media practice.  Youth media combines art, technology and youth development with the goal of amplifying unheard youth voices.  We will screen some of Wide Angle's youth-produced videos, after which youth producers will share their experiences with Wide Angle.  Following will be an interactive conversation about the possibilities of using art and technology to highlight voices and experiences that are often hidden.
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#myramargolin">Myra Margolin</a></span>
+                
+                      <a href="http://twitter.com/@wideangle00" class="twitter" target="_blank">@wideangle00</a>
+                
+              </td>
+          </tr>
+        
+  
+      </tbody></table>
+    
+    
+  
+   
+   
+    
+  
+   
+  
+   
+   
+     
+     
+  
+      <header class="Lectures">Lectures</header>
+      <table class="events striped">
+        <tbody><tr>
+          <th width="4%">Starts</th>
+          <th width="4%">Ends</th>
+          <th width="46%" class="lectures">
+            Lectures
+          </th>
+          <th>Hosted By</th>
+        </tr>
+        
+            <tr>
+              <td width="4%">10am</td>
+              <td width="4%">10:40am</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#leeboot" class="exhibit-title">Using Gadgets to Change Our Stories</a><br>
+                <div class="more" style="display: none;">
+                  This talk will review 10 years of research into using new media technologies to change some very old stories that all of us rely on, consciously or unconsciously, to guide our life decisions. A theory of the potential relationship between art, culture and societal choices will be presented for discussion, as will an alternative view of the how artists and scientists might join forces to do some amazing things for our city.
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#leeboot">Lee Boot</a></span>
+                
+                      <a href="http://twitter.com/@whoweam" class="twitter" target="_blank">@whoweam</a>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">10:45am</td>
+              <td width="4%">11:25am</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#martymcguire" class="exhibit-title">Join the 3D Printing Revolution with MakerBot and Thingiverse!</a><br>
+                <div class="more" style="display: none;">
+                  Open source hardware designs are making it easier and easier to turn digital designs into reality.  More importantly, the awesome community of folks Thingiverse (http://www.thingiverse.com/) are making it easier and easier to turn your ideas into ready-to-manufacture digital designs!
+
+In this workshop, we'll briefly cover how you can get started making your own designs for 3D printing on a MakerBot or via print-on-demand services like Ponoko and Shapeways.  Then, we'll take a whirlwind tour of some of the awesome Things you can download from Thingiverse to build your own designs, and how you can help make the community even better!
+
+Bring your laptop and (for bonus points) get it loaded with:
+
+OpenSCAD - http://www.openscad.org/
+MeshMixer - http://www.meshmixer.com/download.html
+Google SketchUp - http://sketchup.google.com/intl/en/download/index.html
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#martymcguire">Marty McGuire</a></span>
+                
+                      <a href="http://twitter.com/@schmarty" class="twitter" target="_blank">@schmarty</a>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">11:30am</td>
+              <td width="4%">12:10am</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#nealmcdonald" class="exhibit-title">Baltib.org: Baltimore's DIY Arcade Console</a><br>
+                <div class="more" style="display: none;">
+                  Baltib.org is a DIY arcade box. Anyone who can work a saw can make one. This lecture shows you how. 
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#nealmcdonald">Neal McDonald</a></span>
+                
+                      <a href="http://twitter.com/@NealMcDo" class="twitter" target="_blank">@NealMcDo</a>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">12:15am</td>
+              <td width="4%">12:55am</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#callieneylan" class="exhibit-title">Visual Literacy: Why It Matters and How to Get Some</a><br>
+                <div class="more" style="display: none;">
+                  We all spend years studying English language and grammar. A literate society is necessary for a strong democracy, but literacy isn't exclusive to written and spoken language. As designers and technologists creating visual languages for products and services, we should all have a basic level of visual literacy. In this talk, Callie Neylan draws on her extensive experience as a visual interface and interaction designer, outlining elements of visual literacy and why you should care.
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#callieneylan">Callie Neylan</a></span>
+                
+                      <a href="http://twitter.com/@neylano" class="twitter" target="_blank">@neylano</a>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">2:00pm</td>
+              <td width="4%">2:40pm</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#bryanconnor" class="exhibit-title">Visualize Your Own Data!</a><br>
+                <div class="more" style="display: none;">
+                  What's the best place to find really interesting data to visualize? The answer is your own life! Each of us produces a tremendous amount of data exhaust daily. Learn how to harness this data, find interesting stories within it, and visualize it in simple but revealing ways. Then use these skills to create insightful visualizations from almost any data set! It's data visualization 101. 
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#bryanconnor">Bryan Connor</a></span>
+                
+                      <a href="http://twitter.com/@bryanconnor" class="twitter" target="_blank">@bryanconnor</a>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">2:45pm</td>
+              <td width="4%">3:25pm</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#janbaum" class="exhibit-title">Model-Hack-Co-Create: A Field Guide to 21st Century Making </a><br>
+                <div class="more" style="display: none;">
+                  This talk is a field guide to making in the 21st century tracking developments, movements, and new ways of thinking and making. The world has never been more connected, technologies more accessible, the individual more empowered, and design/creativity more highly regarded. Come and learn about the leading edges in making in the 21st century.
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#janbaum">Jan Baum</a></span>
+                
+                      <a href="http://twitter.com/@jangrrrrl" class="twitter" target="_blank">@jangrrrrl</a>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">3:30pm</td>
+              <td width="4%">4:10pm</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#jasoncorace" class="exhibit-title">Games+Art is Good</a><br>
+                <div class="more" style="display: none;">
+                  Creating games has historically been considered a design practice but recently with the availability of new production tools and platforms artists have been creating games and pushing the medium in new directions. This talk will look at the impact that treating games as an art form has had on the medium, review some game making tools and the Game Arts Program at MICA.
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#jasoncorace">Jason Corace</a></span>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">4:15pm</td>
+              <td width="4%">4:55pm</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#myranorton" class="exhibit-title">A Mathematician Sings the Blues</a><br>
+                <div class="more" style="display: none;">
+                  Art, Data, Music:  Is one of these things not like the others?  Come learn how similar the languages of art, music and mathematics really are.  If you are a technologist, learn how the infusion of art or music in your work can bring it to life.  If you are an artist or a musician, learn how mathematics can feed creativity - maybe data isn't as dry as you think!
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#myranorton">Myra Norton</a></span>
+                
+              </td>
+          </tr>
+        
+  
+      </tbody></table>
+    
+    
+  
+   
+   
+     
+     
+  
+      <header class="Workshops @ Baltimore Node">Workshops @ Baltimore Node</header>
+      <table class="events striped">
+        <tbody><tr>
+          <th width="4%">Starts</th>
+          <th width="4%">Ends</th>
+          <th width="46%" class="lectures">
+            Workshops @ Baltimore Node
+          </th>
+          <th>Hosted By</th>
+        </tr>
+        
+            <tr>
+              <td width="4%">10am</td>
+              <td width="4%">11:25am</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#edbearandleabertucci" class="exhibit-title">Exitrip: Hacking the iTrip</a><br>
+                <div class="more" style="display: none;">
+                  Save a FM radio transmitter! Unlock an obsolete iPod accessory and take home your own radio station. 
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#edbearandleabertucci">Ed Bear and Lea Bertucci</a></span>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">11:30am</td>
+              <td width="4%">12:55am</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#kylefritz" class="exhibit-title">Computers Suck, The Internet Rules: How to make networked stuff that interacts with the real world.</a><br>
+                <div class="more" style="display: none;">
+                  The internet gives us awesome ways to affect things in our real environment and best of all you don't need to be in front of a computer to do it. Computers hate water, they are constantly running out of batteries and they're terrible for using outside: forget that! Learn how to control your stereo through twitter, text-message your door to unlock it or start your coffee maker by sending an email.
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#kylefritz">Kyle Fritz</a></span>
+                
+                      <a href="http://twitter.com/@kylefritz" class="twitter" target="_blank">@kylefritz</a>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">2:00pm</td>
+              <td width="4%">3:25pm</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#inversephase" class="exhibit-title">Write your own Nintendo chiptunes in an hour!</a><br>
+                <div class="more" style="display: none;">
+                  The sounds of 8-bit vintage games are intriguing, but how do they do it? In one hour, you will be taken from zero to maestro....well, maybe not that far.... we'll make sure you have an understanding of the basics of what makes a chiptune, how to construct one using provided software, and how to apply that to other systems. Bring your laptops!
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#inversephase">Inverse Phase</a></span>
+                
+                      <a href="http://twitter.com/@inversephase" class="twitter" target="_blank">@inversephase</a>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">3:30pm</td>
+              <td width="4%">4:55pm</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#anthonymattox" class="exhibit-title">Introduction to Processing 101 - Getting the Basics Down</a><br>
+                <div class="more" style="display: none;">
+                  Developed by Ben Fry and Casey Reas Processing is a programming language for visual artists to conceptualize and develop their ideas. Used in data visualizations, generative art and interactive exhibits it's versatile yet has an easy learning curve. In this workshop we'll cover setting up a project and how to get drawing with it quickly and then cover resources for further learning.
+
+Participants are encouraged to bring a laptop with Processing already installed, visit http://processing.org/download/ for download and installation instructions.
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#anthonymattox">Anthony Mattox</a></span>
+                
+                      <a href="http://twitter.com/@ahmattox" class="twitter" target="_blank">@ahmattox</a>
+                
+              </td>
+          </tr>
+        
+  
+      </tbody></table>
+    
+    
+  
+   
+   
+     
+     
+  
+      <header class="Workshops @ Load of Fun Theatre">Workshops @ Load of Fun Theatre</header>
+      <table class="events striped">
+        <tbody><tr>
+          <th width="4%">Starts</th>
+          <th width="4%">Ends</th>
+          <th width="46%" class="lectures">
+            Workshops @ Load of Fun Theatre
+          </th>
+          <th>Hosted By</th>
+        </tr>
+        
+            <tr>
+              <td width="4%">10am</td>
+              <td width="4%">11:25am</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#buckjabaily" class="exhibit-title">Rehearsal as the Backbone of the Creative Process</a><br>
+                <div class="more" style="display: none;">
+                  Rehearsal as the Backbone of the Creative Process - Hands on learning about theater with Buck who will discuss how to approach and plan a scene, hold a mock rehearsal and debrief with the group.
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#buckjabaily">Buck Jabaily</a></span>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">11:30am</td>
+              <td width="4%">12:55am</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#toddblatt" class="exhibit-title">Learn to 3D print your own objects</a><br>
+                <div class="more" style="display: none;">
+                  If you can use MS Paint or draw with a marker, then you can design a 3d model for 3d printing.  Come to this workshop to experience 3d printing and make your jewelry designs come to life through the awesome technology of 3d printing!
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#toddblatt">Todd Blatt</a></span>
+                
+                      <a href="http://twitter.com/@tblatt" class="twitter" target="_blank">@tblatt</a>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">2:00pm</td>
+              <td width="4%">3:25pm</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#racheltimmins" class="exhibit-title">Mutate 101</a><br>
+                <div class="more" style="display: none;">
+                  Mutate 101 will give workshop participants the opportunity to make an object that both transforms and inhibits the body while simultaneously allowing them to gain a new ability or purpose.  This workshop is an exercise in thinking outside of conventional body adornment and function.  
+
+Techniques to be covered:  wet felting (wool), needle felting (wool), basic hand sewing techniques and creative attachment of found objects (most objects will be battery operated or electrical).
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#racheltimmins">Rachel Timmins</a></span>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">3:30pm</td>
+              <td width="4%">4:55pm</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#lauredrogoul" class="exhibit-title">Symphonic Stitch</a><br>
+                <div class="more" style="display: none;">
+                  Symphonic Stitch is an interactive installation that reveals the sound and synchronicity connected to needleworking. The workshop invites the viewer to participate as part of a musical knitting circle. The participants knit in unison creating a singular knit environment of light and sound.
+
+The knitter’s needles are equipped with tiny microphones, which amplify the percussive nature of the knitting process, capturing the rhythmic counter point of the knitters hand movements. The sound is then mixed with Max/MSP/Jitter and projected as video as part of the installation.
+
+The installation becomes a manifestation of the participants collective process and a symphonic expression of the craft. The sound and projected video change based on the knitters stitch, the needles, the yarn and the chosen pattern (i.e. the score might be the pattern for a cable knit sweater). 
+
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#lauredrogoul">Laure Drogoul</a></span>
+                
+              </td>
+          </tr>
+        
+  
+      </tbody></table>
+    
+    
+  
+   
+   
+     
+     
+  
+      <header class="Workshops @ Hour Haus">Workshops @ Hour Haus</header>
+      <table class="events striped">
+        <tbody><tr>
+          <th width="4%">Starts</th>
+          <th width="4%">Ends</th>
+          <th width="46%" class="lectures">
+            Workshops @ Hour Haus
+          </th>
+          <th>Hosted By</th>
+        </tr>
+        
+            <tr>
+              <td width="4%">10am</td>
+              <td width="4%">11:25am</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#cmkt4" class="exhibit-title">CMKT4: Build Differently - Creme DeMentia Bottlecap Contact Microphone</a><br>
+                <div class="more" style="display: none;">
+                  CMKT4 is coming to town just for Betascape. They will be running a Creme DeMentia Bottle Contact Mic workshop where you build a device that is ready to plug into a guitar cable and start making noise.
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#cmkt4">CMKT4</a></span>
+                
+                      <a href="http://twitter.com/@cmkt4" class="twitter" target="_blank">@cmkt4</a>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">11:30am</td>
+              <td width="4%">12:55am</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#cmkt4" class="exhibit-title">CMKT4: Build Differently - Creme DeMentia Bottlecap Contact Microphone</a><br>
+                <div class="more" style="display: none;">
+                  CMKT4 is coming to town just for Betascape. They will be running a Creme DeMentia Bottle Contact Mic workshop where you build a device that is ready to plug into a guitar cable and start making noise.
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#cmkt4">CMKT4</a></span>
+                
+                      <a href="http://twitter.com/@cmkt4" class="twitter" target="_blank">@cmkt4</a>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">2:00pm</td>
+              <td width="4%">3:25pm</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#cmkt4" class="exhibit-title">CMKT4: Build Differently - Circuit Bending and build a Bending Buddy</a><br>
+                <div class="more" style="display: none;">
+                  CMKT4 is coming to town just for Betascape. They will be running a series of workshops that teach people how to circuit bend. Attendees with leave the workshop with their very own kit so they can go off and make some noise.
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#cmkt4">CMKT4</a></span>
+                
+                      <a href="http://twitter.com/@cmkt4" class="twitter" target="_blank">@cmkt4</a>
+                
+              </td>
+          </tr>
+        
+            <tr>
+              <td width="4%">3:30pm</td>
+              <td width="4%">4:55pm</td>
+              <td width="46%" class="lectures">
+                <a href="schedule2011.html#alexsleighter" class="exhibit-title">Seeing the World Through New Eyes: Microsoft Kinect </a><br>
+                <div class="more" style="display: none;">
+                  When Microsoft said "Me too!" to the motion gaming craze, they brought advanced machine vision sensors to our living rooms. Thanks to an economy of scale and a brilliant driver community, hobbyists can give their projects advanced vision for the paltry sum of $150. We'll cover the Kinect's sensors, explore the available data stream, and take a look at some awesome examples in Processing and C#.
+                </div>
+              </td>
+              <td>
+                <span><a href="presenters2011.html#alexsleighter">Alex Sleighter</a></span>
+                
+                      <a href="http://twitter.com/@slezzzter" class="twitter" target="_blank">@slezzzter</a>
+                
+              </td>
+          </tr>
+        
+  
+      </tbody></table>
+    
+    
+   
+  
+  <header class="InteractiveLounge">Interactive Lounge</header>
+  
+    <ul class="interactive">
+     
+              
+          <li class="exhibit">
+            <h4>
+              Make Art with Bristlebots (A tiny directional vibrobot)
+            </h4>
+            <p class="presenter">
+              <a href="presenters2011.html#roseburt">Rose Burt</a>
+              
+                <a href="http://twitter.com/@jhudmc" class="twitter" target="_blank">@jhudmc</a>
+              
+            </p>
+            <p class="description">The BristleBot is a simple and tiny robot with an agenda. The ingredients? One toothbrush, a battery, and a pager motor. The result? Serious fun.
+
+The BristleBot is a take on the popular vibrobot, a simple category of robot that is controlled by a single vibrating (eccentric) motor. Some neat varieties include the mint-tin version as seen in Make Magazine (check the video), and the kid's art bot: a vibrobot with pens for feet. Combine this with ink and/or paint and you have your own Jackson Polluck creation.</p>
+          </li>
+         
+     
+        
+     
+              
+          <li class="exhibit">
+            <h4>
+              Baltiborg
+            </h4>
+            <p class="presenter">
+              <a href="presenters2011.html#dnealmcdonald">D. Neal McDonald</a>
+              
+                <a href="http://twitter.com/@NealMcDo" class="twitter" target="_blank">@NealMcDo</a>
+              
+            </p>
+            <p class="description">Baltib.org is a DIY arcade box. Anyone who can work a saw can make one. This lecture shows you how. </p>
+          </li>
+         
+     
+              
+          <li class="exhibit">
+            <h4>
+              Recording people's voices and thoughts and then putting it all together
+            </h4>
+            <p class="presenter">
+              <a href="presenters2011.html#stephaniebarber">Stephanie Barber</a>
+              
+            </p>
+            <p class="description">Stephanie Barber and Publishing Genius Press will create an audiobook for the forthcoming publication of Simple Machines by Michael Bible. They will be recording the experimental novella throughout the day asking passersby to read one sentence each. The recording session will be simulcast via uStream throughout the day on Saturday, September 23rd and the final product, the audiobook, will be available for download as a free MP3 at PublishingGenius.com
+
+The performance is intended to bring the art-going community into the creation of a piece while at the same time slowing down (and in some ways complicating) the production of this artifact.</p>
+          </li>
+         
+     
+              
+          <li class="exhibit">
+            <h4>
+              Lego Table
+            </h4>
+            <p class="presenter">
+              <a href="presenters2011.html#you">You</a>
+              
+            </p>
+            <p class="description">It's a table of lego's. So awesome it doesn't need a description.</p>
+          </li>
+         
+     
+              
+          <li class="exhibit">
+            <h4>
+              Azzis Product Demonstration w/ Preview of Cocoquantus
+            </h4>
+            <p class="presenter">
+              <a href="presenters2011.html#ciat-lonbarde">Ciat-Lonbarde</a>
+              
+            </p>
+            <p class="description">Demonstration of Tetrazzi, electronic sound box using squish.
+Demonstration of Sidrazzi, the larger, sweeter, version of this.
+Preview of Cocoquantus, 8BIT sampler w/ quantum oscillator mandala.</p>
+          </li>
+         
+     
+              
+          <li class="exhibit">
+            <h4>
+              Jeremy Stern's "Shit Talker" + MacKenzie Peck installation &amp; CAmm Cage info
+            </h4>
+            <p class="presenter">
+              <a href="presenters2011.html#creativealliance">Creative Alliance</a>
+              
+            </p>
+            <p class="description">Stop by to experience Creative Alliance Resident Jeremy Stern's sound installation "Shit Talker"! Check out MacKenzie Peck's "Phase Shifts"! Talk to our Cage worker Ashleigh Coffelt about all the great things you can get from the CAmm Cage!
+
+Jeremy Stern will be in the Interactive Lounge at the Creative Alliance's table from 10:00 am - 2:00 pm on Saturday, September 24th, demonstrating and discussing his recent mapping projects that employ interactive media.  Past projects have employed the dance-oriented software Eyecon, to monitor and correlate visitor movement with sounds from the immediate environment.  Arduino-controlled MP3 players using PIR sensors have also been used to make environmental associations between visitors' movement through a space and individual sound elements such as water or automobile traffic.  </p>
+          </li>
+         
+     
+              
+          <li class="exhibit">
+            <h4>
+              Intridea Sponsor Table
+            </h4>
+            <p class="presenter">
+              <a href="presenters2011.html#intridea">Intridea</a>
+              
+                <a href="http://twitter.com/@intridea" class="twitter" target="_blank">@intridea</a>
+              
+            </p>
+            <p class="description">Stop by and find out what Intridea is up to.</p>
+          </li>
+         
+     
+        
+     
+        
+     
+     </ul>
+
+  
+    <header class="car">AFKFest 2011 Car Computer Festival &amp; Speaker Series</header>
     <p>Mp3Car is hosting another one-of-a-kind show September 24, in Baltimore, Maryland. Come join computer hackers, car enthusiasts, techies, and audiophiles in a day of informative talks, car computer install presentations, socializing and innovating. In the morning, enjoy a free interactive speaker series on various topics on mobile computing.</p>
     <p>This year's AFKFest will be at Betascape 2011, an event made to showcase innovative technology through a series of exhibits, workshops, and social events. Now our forum member vehicles will join forces with the likes of all types of cutting edge, experimental, and interactive technology. Come for the weekend and check out this fun-filled and informative event.</p>
   </div>
@@ -279,7 +993,71 @@ $(function(){
   <h2 class="sunday">Sunday 9AM - 5PM: CreateCamp</h2>
   <div class="sunday">
     <p>Betascape attendees will be given space and in some cases resources, to come together to work on mini projects where they can explore new ideas and concepts that emerge from the series of Betascape events. Some CreateCamp projects will be preplanned and many will be the spontaneous result of inspiration and new ideas. From 4-5PM, CreateCamp Projects will be presented, and awards will be given for the most novel and innovative projects. Note: We will be making a list of facilitators public shortly and we encourage you to reach out to them if you want to collaborate with them on a project</p> 
-    <div class="ccf"></div>
+    <div class="ccf">
+  <div class="createcamp">
+  <header class="lounge">Create Camp Facilitators</header>
+  
+    <ul>
+     
+          <li class="exhibit">
+            <p class="presenter">
+              <a href="presenters2011.html#markheadd">Mark Headd</a>
+              
+                <a href="http://twitter.com/@mheadd" class="twitter" target="_blank">@mheadd</a>
+              
+            </p>
+            <p class="description">Mark has done work lately on a project to help map urban art locations using social media and mobile devices and would love to continue this work with those in the Baltimore community at CreateCamp.</p>
+          </li>
+     
+          <li class="exhibit">
+            <p class="presenter">
+              <a href="presenters2011.html#nitishthakor">Nitish Thakor</a>
+              
+            </p>
+            <p class="description">Nitish is interested in working with diverse, independent-minded and entrepreneurial individuals particularly with an interest in modern microfabrication, stem cell biology, electrophysiology, signal processing, image processing and integrated circuit design technologies.</p>
+          </li>
+     
+          <li class="exhibit">
+            <p class="presenter">
+              <a href="presenters2011.html#brianmurphy&amp;abbieroth">Brian Murphy &amp; Abbie Roth</a>
+              
+            </p>
+            <p class="description">Brian and Abbie will be lending their skills in prototyping and designing new products to CreateCamp participants.</p>
+          </li>
+     
+          <li class="exhibit">
+            <p class="presenter">
+              <a href="presenters2011.html#elizabetheadie">Elizabeth Eadie</a>
+              
+                <a href="http://twitter.com/@ElizabethEadie" class="twitter" target="_blank">@ElizabethEadie</a>
+              
+            </p>
+            <p class="description"> Elizabeth also has worked in a creative project management capacity for clients such as Disney and Warner Bros. Elizabeth is first and foremost a visual designer and looks forward to sharing her design sensibilities with small-businesses.</p>
+          </li>
+     
+          <li class="exhibit">
+            <p class="presenter">
+              <a href="presenters2011.html#joshuaruihley">Joshua Ruihley</a>
+              
+                <a href="http://twitter.com/@jroo" class="twitter" target="_blank">@jroo</a>
+              
+            </p>
+            <p class="description">NSKYC has an API that they are opening up for betascape. Make new projects using the color of Baltimore's sky.</p>
+          </li>
+     
+          <li class="exhibit">
+            <p class="presenter">
+              <a href="presenters2011.html#adamzilberbaum">Adam Zilberbaum</a>
+              
+                <a href="http://twitter.com/@AdamZilberbaum " class="twitter" target="_blank">@AdamZilberbaum </a>
+              
+            </p>
+            <p class="description">Adam is a hackathon veteran ready to contribute to make projects more capital A awesome.</p>
+          </li>
+     
+     </ul>
+   </div>
+</div>
   </div>
 </section>
 

@@ -127,16 +127,16 @@
 $(function(){
   betascape.changeCurrent('presenters')
 
-  betascape.getPresenters(function(presenters){
-      var byPresentType=_.groupBy(presenters,function(presentor){return presentor.lectureType;});
-      var listTmpl=_.template($('#people-template').html());
-      var html=listTmpl({byPresentType : byPresentType});
-      $('.presenters2011 .presenters').append(html);
-	  var anchorTag = document.location.toString().split("#");
-	  if (anchorTag.length > 1) {
-  		  $(window).scrollTo($('a[name=' + anchorTag[1] + ']'), 2000);
-	  }
-  });
+  // betascape.getPresenters(function(presenters){
+  //     var byPresentType=_.groupBy(presenters,function(presentor){return presentor.lectureType;});
+  //     var listTmpl=_.template($('#people-template').html());
+  //     var html=listTmpl({byPresentType : byPresentType});
+  //     $('.presenters2011 .presenters').append(html);
+  // 	  var anchorTag = document.location.toString().split("#");
+  // 	  if (anchorTag.length > 1) {
+  // 		  $(window).scrollTo($('a[name=' + anchorTag[1] + ']'), 2000);
+  // 	  }
+  // });
 });
 
 </script>
@@ -165,7 +165,523 @@ $(function(){
 </script>
 <section class="presenters2011">
   <header><h2>Presenters 2011</h2></header>
-  <ul class="presenters"></ul>
+	<ul class="presenters">
+
+
+	    <li>
+	      <header class="presentType Conversations">Conversations</header>
+	      <ul>
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="nealshaffer" href="http://www.slantsixcreative.com" target="_blank">Neal Shaffer</a>
+
+	                  <a href="http://twitter.com/@slantsixneal" class="twitter" target="_blank">@slantsixneal</a>
+
+	              </h4>
+	              <p class="bio">Neal Shaffer is a Baltimore-based writer and creative strategist. He is (among other things) the founder of Slant Six Creative, a co-organizer of Ignite Baltimore, and managing editor of Bmore Media.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="myramargolin" href="http://www.wideanglemedia.org/" target="_blank">Myra Margolin</a>
+
+	                  <a href="http://twitter.com/@wideangle00" class="twitter" target="_blank">@wideangle00</a>
+
+	              </h4>
+	              <p class="bio">Wide Angle Youth Media is a non-profit organization that provides Baltimore youth with media education to tell their own stories and become engaged in their communities.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="mixtum" href="http://mixtum.org/" target="_blank">Mixtum</a>
+
+	              </h4>
+	              <p class="bio">Mixtum was created together by Baltimore based artist-educators Heidi Gustafson (editor of Early Futures, an alternative early childhood resource site) and Yutaka Houlette (illustrator and teacher).  They met while studying conceptual art at the Maryland Institute College of Art and came up with the idea for Mixtum while working together at Bolton Hill Nursery School.</p>
+	            </li>
+
+
+
+
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="mikesubelsky" href="http://www.subelsky.com/" target="_blank">Mike Subelsky</a>
+
+	                  <a href="http://twitter.com/@subelsky" class="twitter" target="_blank">@subelsky</a>
+
+	              </h4>
+	              <p class="bio">Mike is a Baltimore-based entrepreneur and technologist. His tools of choice are Ruby and JavaScript but he considers himself a jack-of-all-trades. In 2007 he co-founded a web startup called OtherInbox.com, which he left in December to pursue new as-yet-unannounced ventures.
+
+	He's a big believer in Baltimore's innovation community of artists, technologists, thinkers, and strivers of all types. That belief has powered his efforts in co-founding the Baltimore Improv Group, Ignite Baltimore, Startup City, the Baltimore Hackathon, and other activities.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="josephyoung" href="http://www.verysmalldogs.blogspot.com" target="_blank">Joseph Young</a>
+
+	              </h4>
+	              <p class="bio">Joseph Young lives and writes in Baltimore. His book of microfictions, Easter Rabbit, was released in 2009 by Publishing Genius. Joseph also makes text-based art, collaborates with artists, and curates art shows. </p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="bytenyte" href="http://bytenyte.com" target="_blank">Byte Nyte</a>
+
+	                  <a href="http://twitter.com/@bytenyte" class="twitter" target="_blank">@bytenyte</a>
+
+	              </h4>
+	              <p class="bio">Byte Nyte is an 8-Bit event with live musicians and visuals create and perform from national and local groups within the chip community.</p>
+	            </li>
+
+
+	      </ul>
+	    </li>
+
+
+	    <li>
+	      <header class="presentType CreateCampFacilitator">CreateCamp Facilitator</header>
+	      <ul>
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="markheadd" href="http://labs.voxeo.com/" target="_blank">Mark Headd</a>
+
+	                  <a href="http://twitter.com/@mheadd" class="twitter" target="_blank">@mheadd</a>
+
+	              </h4>
+	              <p class="bio">Mark is a software developer with Voxeo Labs and has experience working on all kinds of mobile and web-based apps, including a number of recent mashups between phone, SMS and web apps.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="nitishthakor" href="http://web1.johnshopkins.edu/nthakor/" target="_blank">Nitish Thakor</a>
+
+	              </h4>
+	              <p class="bio">Dr. Nitish Thakor is a professor of biomedical engineering at Johns Hopkins University. He focuses on developing novel instrumentation and technologies to study the brain at several levels - from single cell to the whole brain - with the goal of translating the work into practical research and clinical applications.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="brianmurphy&amp;abbieroth" href="http://www.keytechinc.com/" target="_blank">Brian Murphy &amp; Abbie Roth</a>
+
+	              </h4>
+	              <p class="bio">Brian &amp; Abbie are fantastic engineers with expertise in electrical and mechanical engineering as well as product development.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="elizabetheadie" href="http://www.elizabetheadie.com/" target="_blank">Elizabeth Eadie</a>
+
+	                  <a href="http://twitter.com/@ElizabethEadie" class="twitter" target="_blank">@ElizabethEadie</a>
+
+	              </h4>
+	              <p class="bio">Elizabeth Eadie founded Wellmade Design Company in 2010. Having recently relocated from Los Angeles, Elizabeth began Wellmade as a small business-focused extension of her existing design business. Elizabeth has designed logos for start-ups, stationery for non-profits like Project-X and the American Cancer Society and packaging for consumer products companies, such as Twentieth Century Fox.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="joshuaruihley" href="http://nskyc.com" target="_blank">Joshua Ruihley</a>
+
+	                  <a href="http://twitter.com/@jroo" class="twitter" target="_blank">@jroo</a>
+
+	              </h4>
+	              <p class="bio">@opencrs, nskyc.com/dc and lover of all things blinky. Currently at @cfpb, previously at @sunlightlabs and @cendemtech.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="adamzilberbaum" href="http://zilberbaum.com/" target="_blank">Adam Zilberbaum</a>
+
+	                  <a href="http://twitter.com/@AdamZilberbaum " class="twitter" target="_blank">@AdamZilberbaum </a>
+
+	              </h4>
+	              <p class="bio">Addicted to sports, Information Technology junkie, always looking for new challenges and business development. Software creator, CEO and Triathlete. Co-Founder of Parking Panda</p>
+	            </li>
+
+
+	      </ul>
+	    </li>
+
+
+	    <li>
+	      <header class="presentType InteractiveLounge">Interactive Lounge</header>
+	      <ul>
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="roseburt" href="http://digitalmedia.jhu.edu/" target="_blank">Rose Burt</a>
+
+	                  <a href="http://twitter.com/@jhudmc" class="twitter" target="_blank">@jhudmc</a>
+
+	              </h4>
+	              <p class="bio">Born in North Dakota and raised in the western United States, Rose Hammer Burt moved to the east coast in 2000 to pursue her Bachelors degree in classical saxophone at Peabody, where she also completed her Masters in Computer Music.  
+
+	She became increasingly involved with experimental improvised music in Baltimore, and became a member of the High ZeroFoundation in 2005.  
+
+	Her playing encompasses Afrobeat, experimental improvisation, and highly complex composed music.  Recently she has been exploring circuit-building and video manipulation, presenting a video work at the BMA in May of 2010 and collaborating on a handmade circuit installation for the 2010 Transmodern Festival.  She also works with color and texture by knitting, weaving, spinning, and dying yarn and fiber.
+
+	She currently teaches Audio at the Baltimore School for the Arts, at Goucher in the new MADArts program and is the Audio Specialist at the Johns Hopkins Digital Media Center. </p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="bonniecrawford" href="http://digitalmedia.jhu.edu/" target="_blank">Bonnie Crawford</a>
+
+	                  <a href="http://twitter.com/@BonnieCrawtula" class="twitter" target="_blank">@BonnieCrawtula</a>
+
+	              </h4>
+	              <p class="bio">Bonnie Crawford Kotula investigates light and electricity through sculptural practice. She received her MFA from the University of Maryland Baltimore County in 2008 and her BA in Art from the University of Maryland College Park in 2001.
+
+	Crawford Kotula’s sculpture and installation has been exhibited nationally in South Carolina; Oakland,CA;  Washington, D.C. and Baltimore, as well as internationally in Seoul, Korea and St. Petersburg, Russia.
+
+	In addition, she has coordinated and led several workshops on sewing circuits using conductive thread at School 33 Arts Center and AVAM. Recent exhibitions include a solo show in January of 2011 at the Delaware Center for the Contemporary Arts.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="dnealmcdonald" href="http://baltib.org" target="_blank">D. Neal McDonald</a>
+
+	                  <a href="http://twitter.com/@NealMcDo" class="twitter" target="_blank">@NealMcDo</a>
+
+	              </h4>
+	              <p class="bio">Neal McDonald is an art professor who teaches game development and makes apps. </p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="stephaniebarber" href="http://www.stephaniebarber.com/" target="_blank">Stephanie Barber</a>
+
+	              </h4>
+	              <p class="bio">I am a multi media artist who creates films, videos, performances and literature. Publishing Genius Press is a small, independent publisher that prints short modern literature.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="you" href="" target="_blank">You</a>
+
+	              </h4>
+	              <p class="bio">They're Legos, you know what they are.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="ciat-lonbarde" href="http://www.ciat-lonbarde.net" target="_blank">Ciat-Lonbarde</a>
+
+	              </h4>
+	              <p class="bio">Ciat-Lonbarde is a company that makes Analog Musical Instruments.  Based in West Baltimore, on "Bentalou" Street, this company has two main wings at the moment: -design and execution of elegant and transcendental electronic "signal generators"
+	-encasing of these precious gem-encrustations into boxes of local wood.
+	Silicon is our gem, along with ceramic and carbon on fiberglass boards, with copper as our metal.  Lead is not an evil chemical when used in a musical instrument, for one does not throw it away but use it to make tones that move stones.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="creativealliance" href="http://www.creativealliance.org/" target="_blank">Creative Alliance</a>
+
+	              </h4>
+	              <p class="bio">The Creative Alliance builds communities by bringing together artists and audiences from diverse backgrounds to experience spectacular arts programs and engage in the creative process. We provide support to area artists, promote Baltimore as a center for creative production, act as a positive force in our community, and advocate for cultural expression rooted in a sense of place.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="intridea" href="http://www.intridea.com" target="_blank">Intridea</a>
+
+	                  <a href="http://twitter.com/@intridea" class="twitter" target="_blank">@intridea</a>
+
+	              </h4>
+	              <p class="bio">33rd fastest growing software company in the U.S. according to Inc. 500. We transform great ideas into web and mobile products. What's your idea?</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="jeremystern" href="http://www.jeremysternart.com" target="_blank">Jeremy Stern</a>
+
+	              </h4>
+	              <p class="bio">Jeremy Stern is a conceptual artist who explores mapping and distortions in information through objects, audio, video and installations that often play with viewer perception and interaction. He has exhibited his work in solo and group exhibitions across the U.S. including New York, Colorado, Nevada and Nebraska. An experienced curator who spent four years as Assistant Director &amp; Curator at Omaha’s Bemis Center for Contemporary Arts, Jeremy earned his MFA from the University of Nevada, Reno, and continues to teach drawing and foundations at the university level.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="mackenziepeck" href="http://mackenziepeck.com" target="_blank">MacKenzie Peck</a>
+
+	              </h4>
+	              <p class="bio">MacKenzie Peck, a magna cum laude graduate of Maryland Institute College of Art, is a self-proclaimed post-medium artist exploring ideas of phenomenology, perception and memory. The artist, provoked by an innate fear of death, creates objects in pursuit of englightenment and possession of the sublime. Complimentary to her studio practices, Peck is currently manager of the C. Grimaldis Gallery.</p>
+	            </li>
+
+
+	      </ul>
+	    </li>
+
+
+	    <li>
+	      <header class="presentType Lectures">Lectures</header>
+	      <ul>
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="janbaum" href="http://www.janbaum.net" target="_blank">Jan Baum</a>
+
+	                  <a href="http://twitter.com/@jangrrrrl" class="twitter" target="_blank">@jangrrrrl</a>
+
+	              </h4>
+	              <p class="bio">Jan Baum is a professor at Towson University, a veteran maker, educator, artist/designer, design thinker and more recently an expert on social design, next generation making, and digital design and digital output. She is an early adopter, passionate about life, and loves to travel most recently to Croatia, Vancouver, Greece and Holland.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="leeboot" href="http://whoweam.com" target="_blank">Lee Boot</a>
+
+	                  <a href="http://twitter.com/@whoweam" class="twitter" target="_blank">@whoweam</a>
+
+	              </h4>
+	              <p class="bio">Lee Boot is an artist and researcher in the Imaging Research Center at the University of Maryland, Baltimore County, and founder of the experimental media studio, InfoCulture, LLC. His interest lies in better understanding the relationship between art and culture, and between culture the choices we make as individuals, and as a society. Lee develops media experiments intended to interact with the stories that define our identities and worldviews and tries to assess the results. His first significant project pursuing this objective was the award winning film, Euphoria, and his current effort is the web-based project, WhoWeAm.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="jasoncorace" href="http://www.goldengrave.com" target="_blank">Jason Corace</a>
+
+	              </h4>
+	              <p class="bio">Jason is media artist/educator and his work focuses on the exploration of games, new media and sound. He holds an undergraduate degree from the Evergreen State College and an MFA from the Parsons School of Design. He is currently a professor at the Maryland Institute College of Art in the Integrated Digital Arts Department and Coordinator of the Game Arts Program at MICA.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="myranorton" href="http://www.communityanalytics.com" target="_blank">Myra Norton</a>
+
+	              </h4>
+	              <p class="bio">Myra Norton, Chief Executive Officer of Community Analytics LLC, has been with the firm since its inception in 2004. A mathematician by training, Norton has extensive academic experience as an administrator in the College of Science and Technology at Temple University, teaching in the Business School and the College of Science and Technology at Temple University, as well as lecturing on mathematics and statistics at Towson University and the United States Naval Academy.  
+	</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="martymcguire" href="http://www.makerbot.com/" target="_blank">Marty McGuire</a>
+
+	                  <a href="http://twitter.com/@schmarty" class="twitter" target="_blank">@schmarty</a>
+
+	              </h4>
+	              <p class="bio">Marty McGuire is the head of web development at MakerBot Industries, purveyors of the fine MakerBot line of open-source 3D printers that fit on your desk and build things for you.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="bryanconnor" href="http://www.thewhyaxis.info" target="_blank">Bryan Connor</a>
+
+	                  <a href="http://twitter.com/@bryanconnor" class="twitter" target="_blank">@bryanconnor</a>
+
+	              </h4>
+	              <p class="bio">Bryan is a freelance designer and recent MICA graduate. Through both client and self-initiated projects Bryan focuses on user experience design, data visualization and other opportunities in science, education and technology made possible by the information age. </p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="callieneylan" href="http://nineteenthirtyfour.org/" target="_blank">Callie Neylan</a>
+
+	                  <a href="http://twitter.com/@neylano" class="twitter" target="_blank">@neylano</a>
+
+	              </h4>
+	              <p class="bio">Callie Neylan is an assistant design professor at the University of Maryland in Baltimore. Born in Aspen before movie stars discovered it, she ended up in the mid-Atlantic via a storied, circuitous route through Colorado, New Mexico, Colorado, Washington state, Washington, D.C., and now Maryland. Before life as an academic, she worked at various startups, software companies, and design firms in Seattle and most recently as a senior interaction designer at NPR, where she worked with amazing people and designed award-winning products.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="nealmcdonald" href="http://baltib.org" target="_blank">Neal McDonald</a>
+
+	                  <a href="http://twitter.com/@NealMcDo" class="twitter" target="_blank">@NealMcDo</a>
+
+	              </h4>
+	              <p class="bio">Neal McDonald is an art professor who teaches game development and makes apps. </p>
+	            </li>
+
+
+	      </ul>
+	    </li>
+
+
+	    <li>
+	      <header class="presentType Workshops">Workshops</header>
+	      <ul>
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="toddblatt" href="http://bytestobits.com" target="_blank">Todd Blatt</a>
+
+	                  <a href="http://twitter.com/@tblatt" class="twitter" target="_blank">@tblatt</a>
+
+	              </h4>
+	              <p class="bio">Todd earns his living by designing and selling digitally manufactured products and most of them made with 3D printing.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="kylefritz" href="http://simplicitysignals.com/" target="_blank">Kyle Fritz</a>
+
+	                  <a href="http://twitter.com/@kylefritz" class="twitter" target="_blank">@kylefritz</a>
+
+	              </h4>
+	              <p class="bio">Biking riding, biomedical, computer software engineer. Co-Founder of Vigilant Medical.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="buckjabaily" href="http://jbuckjabaily.com/" target="_blank">Buck Jabaily</a>
+
+	              </h4>
+	              <p class="bio">A Colorado native, J. Buck Jabaily is a theatre director and arts administrator. He’s the founding artistic director of Single Carrot Theatre, and the executive director of the Greater Baltimore Cultural Alliance. He lives in Baltimore, Maryland with his wife, Giti.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="racheltimmins" href="http://www.racheltimmins.com" target="_blank">Rachel Timmins</a>
+
+	              </h4>
+	              <p class="bio">Rachel Timmins is a Studio Art (Metals Concentration) MFA candidate at Towson University with a BFA in Metal/Jewelry Design. Rachel has been the recipient of numerous awards including two time status as a Finalist in the Student NICHE Awards, the Jaquet Award at Buffalo State College and the Award for Excellence in Sculpture at Buffalo State College. Her work has been shown in national and and international exhibitions and she is commissioned regularly to make custom works.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="lauredrogoul" href="http://www.olfactoryfactory.org/" target="_blank">Laure Drogoul</a>
+
+	              </h4>
+	              <p class="bio">Laure Drogoul is an interdisciplinary artist. Her artworks are a hybrid combination of video, sculpture and performance that invite audience participation. She has received Maryland State Art Awards, a Franklin Furnace Award for performance art, and has been a recipient of an US/Japan Creative Artist Fellowship. In 2006 she was honored with The Janet and Walter Sondheim Prize.
+	</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="cmkt4" href="http://facebook.com/cmkt4" target="_blank">CMKT4</a>
+
+	                  <a href="http://twitter.com/@cmkt4" class="twitter" target="_blank">@cmkt4</a>
+
+	              </h4>
+	              <p class="bio">They are North America's #1 Circuit-Bending Hackerspace Rock Trio. In addition to their duties as a rock trio, they tour the country teaching workshops from their Creme DeMentia Circuit Bending and Contact Microphone comic book kits.</p>
+	            </li>
+
+
+
+
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="edbearandleabertucci" href="http://www.exitrip.org" target="_blank">Ed Bear and Lea Bertucci</a>
+
+	              </h4>
+	              <p class="bio">Lea Bertucci is an interdisciplinary artist based in Brooklyn NY who works with photography, video and sound. The emphasis of her work lies in the creative description of space, whether through light, movement or sound. 
+	Ed Bear is a musician and engineer working with found electronics, video, transmission and collective improvisation. As an educator and artist, he aims to technologically empower everyone as scientists and magicians and investigate the questionable calibration of human perception. </p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="inversephase" href="http://inversephase.bandcamp.com/" target="_blank">Inverse Phase</a>
+
+	                  <a href="http://twitter.com/@inversephase" class="twitter" target="_blank">@inversephase</a>
+
+	              </h4>
+	              <p class="bio">Inverse Phase is a freelance videogame composer and chiptune musician performing at Byte Nyte and sitting on their lecture about the chiptune community. He enjoys using oldschool computers and game systems such as the NES, Commodore 64, MSX, or Atari 800 to make cool, new sounds, often mimicking modern sounds or music in the process to keep it interesting. His current material includes both covers and original materials, with an both original game soundtrack and an entire Nine Inch Nails cover album in the works. </p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="anthonymattox" href="http://anthonymattox.com/" target="_blank">Anthony Mattox</a>
+
+	                  <a href="http://twitter.com/@ahmattox" class="twitter" target="_blank">@ahmattox</a>
+
+	              </h4>
+	              <p class="bio">Anthony Mattox is a digital artist and designer. His work focuses on interface and web design, games, generative artworks and other interactive systems. His generative works, primarily created in Processing, are scripted, iterated processes which gradually build complex images. In design, he concentrates on user experience and usability, pushing to create more powerful, effective, and enjoyable experiences within interfaces, games, and artwork.
+	He also dabbles in sound, electronic music, data visualization, installation artwork, ceramics, cooking, and other nerdy ventures.</p>
+	            </li>
+
+
+
+	            <li class="presenter">
+	              <h4>
+	                <a name="alexsleighter" href="http://thebuildsource.com/kinect" target="_blank">Alex Sleighter</a>
+
+	                  <a href="http://twitter.com/@slezzzter" class="twitter" target="_blank">@slezzzter</a>
+
+	              </h4>
+	              <p class="bio">Alex Sleighter is a biomedical and electrical engineer by training and a software engineer by trade. He hoards electronic components, but *collects* Intel CPUs, and has a minor obsession with home automation.</p>
+	            </li>
+
+
+	      </ul>
+	    </li>
+
+	</ul>
 </section>
 
 
