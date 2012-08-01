@@ -174,7 +174,7 @@ footer {
 
 @register-button-height: 120px;
 .register-announcement {
-  .button {
+  a.button {
     .border-radius(6px);
     background: lighten(@theme-blue, 10%);
     color: lighten(@black, 10%);
@@ -185,6 +185,7 @@ footer {
     line-height: @register-button-height;
     text-align: center;
     width: 100%;
+    cursor: url('/img/pointer-icon-big.gif'),auto;
   }
 
   .description {
@@ -195,7 +196,7 @@ footer {
 }
 
 .row .span1.plushalf {
-  width: @fluidGridColumnWidth * 1.6;
+  width: @fluidGridColumnWidth * 2;
 }
 
 .main {
