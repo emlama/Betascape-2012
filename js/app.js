@@ -1302,7 +1302,6 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
     this.$body = $('body')
     this.refresh()
     this.process()
-		// console.log(this);
   }
 
   ScrollSpy.prototype = {
@@ -1331,7 +1330,6 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             self.offsets.push(this[0])
             self.targets.push(this[1])
           })
-				// console.log($targets);
       }
 
     , process: function () {
@@ -1343,12 +1341,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           , targets = this.targets
           , activeTarget = this.activeTarget
           , i
-				
-				console.log(scrollTop)
-				console.log(scrollHeight)
-				console.log(maxScroll)
-				console.log(this.$scrollElement.height())
-				
+
         if (scrollTop >= maxScroll) {
           return activeTarget != (i = targets.last()[0])
             && this.activate ( i )
@@ -1361,11 +1354,9 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             && this.activate( targets[i] )
         }
 
-				console.log('process ran');
       }
 
     , activate: function (target) {
-				console.log('Activate Target: ' + target);
         var active
           , selector
 
