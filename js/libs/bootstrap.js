@@ -1323,10 +1323,12 @@
             self.offsets.push(this[0])
             self.targets.push(this[1])
           })
+					console.log('refresh');
+					console.log($targets);
       }
 
     , process: function () {
-				console.log('process called')
+				// console.log('process called')
         var scrollTop = this.$scrollElement.scrollTop() + this.options.offset
           , scrollHeight = this.$scrollElement[0].scrollHeight || this.$body[0].scrollHeight
           , maxScroll = scrollHeight - this.$scrollElement.height()
@@ -1334,8 +1336,20 @@
           , targets = this.targets
           , activeTarget = this.activeTarget
           , i
-
+				
+				// Debug code.
+				$('.scrollTop span').html(scrollTop);
+				// console.log(maxScroll);
+				// console.log(this.$scrollElement[0].scrollHeight);
+				// console.log("this.body " + this.$body[0].scrollHeight);
+				
+				// maxScroll 668
+				// scrollHeight 1200 via this.$body[0].scrollHeight
+				// this.$scrollElement.height() 532
+				// console.log(this.$scrollElement);
+				console.log(this.$scrollElement.height());
         if (scrollTop >= maxScroll) {
+					console.log("scrollTop >= maxScroll fired");
           return activeTarget != (i = targets.last()[0])
             && this.activate ( i )
         }

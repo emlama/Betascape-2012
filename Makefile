@@ -27,7 +27,7 @@ web:
 ## asset packager, lol
 JS_FILES= js/libs/jquery-1.7.1.min.js \
 					js/libs/modernizr-2.5.3.min.js \
-					js/libs/bootstrap.js \
+					js/libs/bootstrap.min.js \
 					js/plugins.js \
 					js/application.js \
 					js/forget-coffeeScript.js

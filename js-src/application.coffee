@@ -24,4 +24,4 @@ $ ->
       else
 
 
-$('#navbar').scrollspy();
+# $('#navbar').scrollspy();
