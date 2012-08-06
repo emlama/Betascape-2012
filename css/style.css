@@ -62,26 +62,38 @@ body {
 }
 
 .navbar .ticket-link {
-  display: block;
+  position: relative;
   float: right;
   width: 300px;
-  margin: 0;
-  margin-top: 0;
-  margin-bottom: -25px;
+  margin: 0 18px -25px 0;
+}
+
+.navbar .ticket-link span {
+  position: absolute;
+  top: 0;
+  width: 18px;
+  height: 50px;
+}
+
+.navbar .ticket-link span.ticket-left {
+  left: 0;
+  background: url('../img/ticket_left.png') 0 0 no-repeat transparent;
+}
+
+.navbar .ticket-link span.ticket-right {
+  right: 0;
+  background: url('../img/ticket_right.png') 0 0 no-repeat transparent;
+}
+
+.navbar .ticket-link a {
+  display: block;
+  width: 264px;
+  margin: 0 0 0 18px;
   line-height: 50px;
   color: #ffffff;
   text-align: center;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #C8602C;
-  -webkit-border-bottom-right-radius: 2px;
-     -moz-border-bottom-right-radius: 2px;
-          border-bottom-right-radius: 2px;
-  -webkit-border-bottom-left-radius: 2px;
-     -moz-border-bottom-left-radius: 2px;
-          border-bottom-left-radius: 2px;
-  -webkit-background-clip: padding-box;
-     -moz-background-clip: padding;
-          background-clip: padding-box;
 }
 
 .subnav {
@@ -379,4 +391,8 @@ footer p a {
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
+}
+
+.siteContent .row {
+  margin-top: 20px;
 }

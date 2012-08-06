@@ -1290,7 +1290,7 @@
     this.$scrollElement = $element.on('scroll.scroll.data-api', process)
     this.selector = (this.options.target
       || ((href = $(element).attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
-      || '') + ' .subNavCheat li > a'
+      || '') + '.subnav .nav li > a'
 		console.log(this.selector)
     this.$body = $('body')
     this.refresh()
@@ -1338,7 +1338,7 @@
           , i
 				
 				// Debug code.
-				$('.scrollTop span').html(scrollTop);
+				// $('.scrollTop span').html(scrollTop);
 				// console.log(maxScroll);
 				// console.log(this.$scrollElement[0].scrollHeight);
 				// console.log("this.body " + this.$body[0].scrollHeight);
@@ -1372,6 +1372,9 @@
         $(this.selector)
           .parent('.active')
           .removeClass('active')
+				
+				console.log('activeate');
+				console.log($(this.selector).parent('.active'));
 
         selector = this.selector
           + '[data-target="' + target + '"],'
