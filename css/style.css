@@ -43,6 +43,8 @@ body {
 }
 
 .navbar .navbar-inner {
+  position: relative;
+  z-index: 9999;
   color: #cccbbe;
   background: #101010;
 }
@@ -83,7 +85,9 @@ body {
 }
 
 .subnav {
-  background: #ffffff;
+  position: relative;
+  z-index: 9998;
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .subnav .nav > li > a {
@@ -95,6 +99,12 @@ body {
 
 .subnav .nav > li > a:hover {
   color: #33a0bc;
+}
+
+.subnav .nav > li.active > a,
+.subnav .nav > li.active > a:hover {
+  color: #33a0bc;
+  background-color: rgba(239, 239, 239, 0.95);
 }
 
 .header-wrapper {

@@ -22,6 +22,3 @@ $ ->
           scrollTop: $("##{target}").offset().top - 70
         , 1000
       else
-
-
-# $('#navbar').scrollspy();

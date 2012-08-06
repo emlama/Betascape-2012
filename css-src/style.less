@@ -78,6 +78,8 @@ body {
   .navbar-inner {
     background: @black;
     color: @grayLighter;
+		z-index:9999;
+		position: relative;
   }
 
   .nav, .ticket-link {
@@ -111,7 +113,10 @@ body {
 }
 
 .subnav {
-	background: @white;
+	background: fade(@white, 95%);
+	position: relative;
+  z-index: 9998;
+
 	.nav > li > a {
 		font-weight: normal;
 		text-shadow: none;
@@ -122,6 +127,13 @@ body {
 	.nav > li > a:hover {
 		color: @theme-blue;
 	}
+	
+	.nav > li.active > a,
+	.nav > li.active > a:hover {
+		background-color: fade(#EFEFEF, 95%);
+		color: @theme-blue;
+	}
+	
 }
 
 .header-wrapper {
