@@ -38,7 +38,7 @@ footer p a{color:inherit;}
 .sponsors ul li{list-style-type:none;padding-left:10px;margin-bottom:10px;display:inline-block;}
 .sponsors ul li:first{padding-left:0;}
 .becomeSponsor{text-align:center;margin:40px 20px 0;}.becomeSponsor a{padding:8px 12px;font-size:16px;background-color:#afc04d;color:white;font-weight:bold;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;}
-.siteContent .row{margin-bottom:70px;font-size:14px;line-height:1.5em;}.siteContent .row .row{margin-bottom:10px;}
+.siteContent .row{margin-bottom:70px;font-size:16px;line-height:26px;}.siteContent .row .row{margin-bottom:10px;}
 h1.banner{text-align:center;height:69px;line-height:80px;margin-bottom:20px;}
 h1.banner-orange{background:url('../img/banner_orange_span10.png') center top no-repeat transparent;}
 h1.banner-blue{background:url('../img/banner_blue_span10.png') center top no-repeat transparent;}
@@ -46,4 +46,4 @@ h1.banner-brown{background:url('../img/banner_brown_span10.png') center top no-r
 h1.banner-gray{background:url('../img/banner_gray_span10.png') center top no-repeat transparent;}
 h1.banner-green{background:url('../img/banner_green_span10.png') center top no-repeat transparent;}
 .lab-image{text-align:center;}
-.callout{font-size:16px;line-height:26px;font-weight:300;}
+.callout{font-size:16px;line-height:26px;}
