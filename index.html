@@ -251,10 +251,10 @@
 
       var mapOptions = {
         styles: styles,
-        zoom: 16,
-        disableDefaultUI: true,
-        scrollwheel: false,
-        zoomControl: true,
+        zoom:               16,
+        disableDefaultUI:   true,
+        scrollwheel:        false,
+        zoomControl:        true,
         zoomControlOptions: {
           style: google.maps.ZoomControlStyle.SMALL
         },
@@ -265,31 +265,31 @@
       var map = new google.maps.Map(document.getElementById('map-canvas'),
           mapOptions);
 
-			var markerImage = '/img/marker.png';
+			var markerImage      = '/img/marker.png';
 			
-			var falveyLatlng = new google.maps.LatLng(39.30828560973389, -76.6210126876831);
-			var gatewayLatlng = new google.maps.LatLng(39.31042734382593, -76.62373781204224);
-			var mainBldgLatlng = new google.maps.LatLng(39.3075550807882, -76.6215705871582);
+			var falveyLatlng     = new google.maps.LatLng(39.30828560973389, -76.6210126876831);
+			var gatewayLatlng    = new google.maps.LatLng(39.31042734382593, -76.62373781204224);
+			var mainBldgLatlng   = new google.maps.LatLng(39.3075550807882, -76.6215705871582);
 			
 			var falveyMarker = new google.maps.Marker({
-					position: falveyLatlng,
-					map: map,
-					title:"Falvey Hall",
-					icon: markerImage
+					position:  falveyLatlng,
+					map:       map,
+					title:     "Falvey Hall",
+					icon:      markerImage
 			});
 			
 			var gatewayMarker = new google.maps.Marker({
-					position: gatewayLatlng,
-					map: map,
-					title:"Gateway Building",
-					icon: markerImage
+					position:  gatewayLatlng,
+					map:       map,
+					title:     "Gateway Building",
+					icon:      markerImage
 			});
 			
 			var mainBldgMarker = new google.maps.Marker({
-					position: mainBldgLatlng,
-					map: map,
-					title:"Main Building",
-					icon: markerImage
+					position:  mainBldgLatlng,
+					map:       map,
+					title:     "Main Building",
+					icon:      markerImage
 			});
     }
     $(function () {
