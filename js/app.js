@@ -48,9 +48,12 @@ $(document).ready(function() {
   });
 
   $('.description a').click(function(evt) {
-    evt.preventDefault();
-    $.scrollTo($(this).attr('href'), 1000, {offset: -90});
-    console.log("was called");
+  	// Little hack to let local links work and outbounds do fine.
+  	if ($(this).attr('href').substring(0, 1) == "#") {
+	    evt.preventDefault();
+	    $.scrollTo($(this).attr('href'), 1000, {offset: -90});
+	    console.log("was called");
+	}
   });
 });
 
